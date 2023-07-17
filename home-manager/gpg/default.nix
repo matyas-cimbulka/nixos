@@ -1,3 +1,4 @@
+{ config, ... }:
 {
     programs.gpg = {
         enable = true;
@@ -8,5 +9,18 @@
                 trust = "ultimate";
             }
         ];
+    };
+
+    home.file = {
+        gpg-agent = {
+            enable = true;
+            source = ./gpg-agent.conf
+            target = "${config.home.homeDirectory}/.gnupg";
+        };
+        sshcontrol = {
+            enable = true;
+            source = ./sshcontrol
+            target = "${config.home.homeDirectory}/.gnupg";
+        };
     };
 }
