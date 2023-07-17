@@ -24,7 +24,7 @@
   
   imports = [
     ./git.nix
-    ./gpg/gpg.nix
+    ./gpg
     ./zsh.nix
   ];
   
