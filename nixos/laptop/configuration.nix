@@ -13,10 +13,10 @@
   };
 
   imports = [
-      ./gnome.nix
-      ./gpg.nix
+      ./../gnome.nix
+      ./../gpg.nix
       ./hardware-configuration.nix
-      ./nvidia-prime.nix
+      ./../nvidia-prime.nix
     ];
     
   fileSystems = {
