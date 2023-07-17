@@ -14,13 +14,13 @@
     home.file = {
         gpg-agent = {
             enable = true;
-            source = ./gpg-agent.conf
-            target = "${config.home.homeDirectory}/.gnupg";
+            source = ./gpg-agent.conf;
+            target = "${config.home.homeDirectory}/.gnupg/gpg-agent.conf";
         };
         sshcontrol = {
             enable = true;
-            source = ./sshcontrol
-            target = "${config.home.homeDirectory}/.gnupg";
+            source = ./sshcontrol;
+            target = "${config.home.homeDirectory}/.gnupg/sshcontrol";
         };
     };
 }

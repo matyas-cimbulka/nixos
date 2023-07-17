@@ -13,6 +13,7 @@
       enable = true;
       theme = "robbyrussell";
       plugins = [
+        "gpg-agent"
         "sudo"
         "systemd"
       ];
