@@ -27,7 +27,7 @@
     ./teleport
     ./git.nix
     ./zellij.nix
-    ./zsh.nix
+    ./zsh
   ];
   
   nixpkgs.config = {
