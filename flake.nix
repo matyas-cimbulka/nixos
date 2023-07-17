@@ -30,7 +30,7 @@
     # Entry point for home-manager configuration
     # Command: home-manager --flake .#username@hostname
     homeConfigurations = {
-      "matyas@laptop" = home-manager.lib.homeManagerConfiguration {
+      "matyas" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.x86_64-linux;
         extraSpecialArgs = { inherit inputs; };
         modules = [ ./home-manager/home.nix ];
