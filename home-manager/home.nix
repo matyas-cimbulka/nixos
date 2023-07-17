@@ -25,6 +25,7 @@
   imports = [
     ./git.nix
     ./gpg
+    ./zellij.nix
     ./zsh.nix
   ];
   

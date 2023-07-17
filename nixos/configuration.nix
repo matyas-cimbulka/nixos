@@ -12,42 +12,17 @@
     '';
   };
 
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
+  imports = [
+      ./gnome.nix
       ./gpg.nix
+      ./hardware-configuration.nix
+      ./nvidia-prime.nix
     ];
     
   fileSystems = {
     "/".options = [ "compress=zstd:3" ];
     "/home".options = [ "compress=zstd:6" ];
     "/nix".options = [ "compress=zstd:6 noatime" ];
-  };
-
-  hardware = {
-    opengl = {
-      enable = true;
-      driSupport = true;
-      driSupport32Bit = true;
-    };
-    
-    nvidia = {
-      modesetting.enable = true;
-      powerManagement.enable = true;
-      nvidiaSettings = true;
-        
-      prime = {
-        offload = {
-          enable = true;
-          enableOffloadCmd = true;
-        };
-        
-        intelBusId = "PCI:0:2:0";
-        nvidiaBusId = "PCI:1:0:0";
-      };
-    };
-
-    pulseaudio.enable = true;
   };
 
   # Use the GRUB 2  boot loader.
@@ -73,35 +48,17 @@
   # Set your time zone.
   time.timeZone = "Europe/Prague";
 
-  # Configure network proxy if necessary
-  # networking.proxy.default = "http://user:password@proxy:port/";
-  # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
-
-  # Select internationalisation properties.
-  # i18n.defaultLocale = "en_US.UTF-8";
-  # console = {
-  #   font = "Lat2-Terminus16";
-  #   keyMap = "us";
-  #   useXkbConfig = true; # use xkbOptions in tty.
-  # };
-
   # Enable the X11 windowing system.
   services = {
     xserver = {
       enable = true;
-      videoDrivers = [ "nvidia" ];
       layout = "gb";
       libinput.enable = true;
-
-    # Enable the GNOME Desktop Environment.
-      displayManager.gdm.enable = true;
-      desktopManager.gnome.enable = true;
     };
 
     # Enable CUPS to print documents.
     printing.enable = true;
 
-    udev.packages = with pkgs; [ gnome.gnome-settings-daemon ];
     flatpak.enable = true;
   }; 
 
@@ -111,6 +68,7 @@
 
   # Enable sound.
   sound.enable = true;
+  hardware.pulseaudio.enable = true;
 
   programs.zsh.enable = true;
 
@@ -130,25 +88,6 @@
     wget
     home-manager
   ];
-
-  # Some programs need SUID wrappers, can be configured further or are
-  # started in user sessions.
-  # programs.mtr.enable = true;
-  # programs.gnupg.agent = {
-  #   enable = true;
-  #   enableSSHSupport = true;
-  # };
-
-  # List services that you want to enable:
-
-  # Enable the OpenSSH daemon.
-  # services.openssh.enable = true;
-
-  # Open ports in the firewall.
-  # networking.firewall.allowedTCPPorts = [ ... ];
-  # networking.firewall.allowedUDPPorts = [ ... ];
-  # Or disable the firewall altogether.
-  # networking.firewall.enable = false;
 
   # Copy the NixOS configuration file and link it from the resulting system
   # (/run/current-system/configuration.nix). This is useful in case you
