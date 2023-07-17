@@ -8,4 +8,4 @@ Host *.teleport.cimbulka.net
 # Flags for all teleport.cimbulka.net hosts except the proxy
 Host *.teleport.cimbulka.net !teleport.cimbulka.net
     Port 3025
-    ProxyCommand "/usr/local/bin/tsh" proxy ssh --cluster=teleport.cimbulka.net --proxy=teleport.cimbulka.net:443 %r@%h:%p
+    ProxyCommand "/home/matyas/.nix-profile/bin/tsh" proxy ssh --cluster=teleport.cimbulka.net --proxy=teleport.cimbulka.net:443 %r@%h:%p

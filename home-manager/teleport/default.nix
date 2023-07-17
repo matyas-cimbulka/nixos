@@ -7,9 +7,9 @@
         file = {
             ssh-config = {
                 enable = true;
-                source = ./ssh-config
-                target = "${config.home.homeDirectory}/.ssh/config"
-            }
-        }
-    }
+                source = ./ssh-config;
+                target = "${config.home.homeDirectory}/.ssh/config";
+            };
+        };
+    };
 }
