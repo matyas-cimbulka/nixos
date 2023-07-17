@@ -23,8 +23,9 @@
   };
   
   imports = [
-    ./git.nix
     ./gpg
+    ./teleport
+    ./git.nix
     ./zellij.nix
     ./zsh.nix
   ];

@@ -28,7 +28,7 @@
     };
     
     # Entry point for home-manager configuration
-    # Command: home-manager --flake .#username@hostname
+    # Command: home-manager --flake .#username
     homeConfigurations = {
       "matyas" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.x86_64-linux;
