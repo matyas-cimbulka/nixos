@@ -18,6 +18,8 @@
         };
     };
 
+    services.dbus.enable = true;
+
     networking.domain = "cimbulka.net";
 
     environment.enableAllTerminfo = true;
