@@ -19,7 +19,10 @@
         "/nix".options = [ "compress=zstd:6 noatime" ];
     };
 
-    networking.hostName = "deimos";
+    networking = {
+        hostName = "deimos";
+        networkmanager.enable = true;
+    };
 
     services = {
         xserver = {

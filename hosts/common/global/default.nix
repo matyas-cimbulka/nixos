@@ -18,10 +18,7 @@
         };
     };
 
-    networking = {
-        domain = "cimbulka.net";
-        networkmanager.enable = true;
-    };
+    networking.domain = "cimbulka.net";
 
     environment.enableAllTerminfo = true;
     time.timeZone = "Europe/Prague";
