@@ -3,6 +3,9 @@
   
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+
+    nix-colors.url = "github:misterio77/nix-colors";
+
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -13,16 +16,10 @@
     # NixOs configuration endpoint
     # Command: nixos-rebuild --flake .#hostname
     nixosConfigurations = {
-      laptop = nixpkgs.lib.nixosSystem {
+      deimos = nixpkgs.lib.nixosSystem {
         specialArgs = { inherit inputs; };
         modules = [
-          ./nixos/laptop/configuration.nix
-          home-manager.nixosModules.home-manager
-          {
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-            home-manager.users.matyas = import ./home-manager/home.nix;
-          }
+          ./hosts/deimos
         ];
       };
     };
@@ -30,10 +27,10 @@
     # Entry point for home-manager configuration
     # Command: home-manager --flake .#username
     homeConfigurations = {
-      "matyas" = home-manager.lib.homeManagerConfiguration {
+      "matyas@deimos" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.x86_64-linux;
         extraSpecialArgs = { inherit inputs; };
-        modules = [ ./home-manager/home.nix ];
+        modules = [ ./home/matyas/deimos.nix ];
       };
     };
   };
