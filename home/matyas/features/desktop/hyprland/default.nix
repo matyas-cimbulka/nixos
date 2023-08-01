@@ -115,11 +115,11 @@
                 "$mod SHIFT, 9, movetoworkspace, 9"
                 "$mod SHIFT, 0, movetoworkspace, 10"
 
-                # Scroll through workspaces
-                "CONTROL ALT, left, workspace, e-1"
-                "CONTROL ALT, right, workspace, e+1"
-                "CONTROL ALT SHIFT, left, movetoworkspace, e-1"
-                "CONTROL ALT SHIFT, right, movetoworkspace, e+1"
+                # Scroll through workspacesee
+                "CONTROL ALT, left, workspace, r-1"
+                "CONTROL ALT, right, workspace, r+1"
+                "CONTROL ALT SHIFT, left, movetoworkspace, r-1"
+                "CONTROL ALT SHIFT, right, movetoworkspace, r+1"
             ];
 
             bindm = [
