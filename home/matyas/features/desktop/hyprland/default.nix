@@ -29,7 +29,6 @@
         settings = {
             input = {
                 follow_mouse = 1;
-                sensitivity = 0;
             };
 
             general = {
@@ -119,6 +118,8 @@
                 # Scroll through workspaces
                 "CONTROL ALT, left, workspace, e-1"
                 "CONTROL ALT, right, workspace, e+1"
+                "CONTROL ALT SHIFT, left, movetoworkspace, e-1"
+                "CONTROL ALT SHIFT, right, movetoworkspace, e+1"
             ];
 
             bindm = [

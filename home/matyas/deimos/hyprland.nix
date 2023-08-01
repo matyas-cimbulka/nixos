@@ -4,6 +4,7 @@
 
         input = {
             kb_layout = "gb";
+            sensitivity = 0.3;
 
             touchpad = {
                 natural_scroll = true;
