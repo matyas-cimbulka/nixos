@@ -7,19 +7,18 @@
         nvidiaPatches = true;
     };
 
-    services = {
-        displayManager.gdm = {
-            enable = true;
-            autoSuspend = false;
-        };
+    services.xserver.displayManager.gdm = {
+        enable = true;
+        autoSuspend = false;
     };
 
     xdg.portal = {
         enable = true;
         wlr.enable = true;
 
-        extraPortals = with pkgs [
-            pkgs.xdg-desktop-portal-gtk
+        extraPortals = with pkgs; [
+            xdg-desktop-portal-gtk
+        #    xdg-desktop-portal-hyprland
         ];
     };
 
