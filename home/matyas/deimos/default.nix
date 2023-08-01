@@ -2,9 +2,10 @@
 
 {
     imports = [
-        ./global
+        ../global
 
-        ./features/desktop/hyprland
+        ../features/desktop/hyprland
+        ./hyprland.nix
     ];
 
     colorscheme = inputs.nix-colors.colorschemes.material-vivid;

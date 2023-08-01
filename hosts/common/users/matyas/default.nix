@@ -25,5 +25,5 @@ in
     };
 
     programs.zsh.enable = true;
-    home-manager.users.matyas = import ../../../../home/matyas/${config.networking.hostName}.nix;
+    home-manager.users.matyas = import ../../../../home/matyas/${config.networking.hostName};
 }
