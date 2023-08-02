@@ -13,8 +13,6 @@
                 };
                 startup_mode = "Maximized";
             };
-<<<<<<< HEAD
-=======
 
             font = {
                 normal = {
@@ -32,7 +30,6 @@
                     style = "Italic";
                 };
             };
->>>>>>> main
         };
     };
 }
