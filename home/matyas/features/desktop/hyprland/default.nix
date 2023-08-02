@@ -4,6 +4,10 @@
     imports = [
         ../common
         ../common/wayland-wm
+<<<<<<< HEAD
+=======
+    #    ./eww
+>>>>>>> main
 
         ../../terminals/alacritty.nix
     ];

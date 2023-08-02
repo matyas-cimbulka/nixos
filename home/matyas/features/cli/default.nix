@@ -5,15 +5,16 @@
         ./gpg
         ./zsh
         
+        ./btop.nix
+        ./exa.nix
         ./git.nix
         ./zellij.nix
     ];
 
     home.packages = with pkgs; [
         vim
-        btop
         ncdu
-        exa
-        ripgrep
     ];
+
+    programs.ripgrep.enable = true;
 }
