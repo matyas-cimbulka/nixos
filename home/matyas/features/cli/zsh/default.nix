@@ -1,13 +1,7 @@
 { config, pkgs, ... }:
 
 {
-  fonts.fontconfig.enable = true;
-
   home = {
-    packages = [
-      (pkgs.nerdfonts.override { fonts = [ "FiraCode" "DroidSansMono" ]; })
-    ];
-
     file.p10k-config = {
       enable = true;
       source = ./p10k.zsh;

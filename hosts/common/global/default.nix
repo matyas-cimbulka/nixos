@@ -1,6 +1,6 @@
 # Global config which is used on all hosts
 
-{ inputs, ... }:
+{ inputs, pkgs, ... }:
 
 {
     imports = [
@@ -21,7 +21,15 @@
     services.dbus.enable = true;
 
     networking.domain = "cimbulka.net";
-
-    environment.enableAllTerminfo = true;
     time.timeZone = "Europe/Prague";
+    fonts.fontconfig.enable = true;
+
+    environment = {
+        enableAllTerminfo = true;
+
+        systemPackages = with pkgs; [
+            nerdfonts
+            git
+        ];
+    };
 }
