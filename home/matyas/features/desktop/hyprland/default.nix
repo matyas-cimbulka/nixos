@@ -4,8 +4,8 @@
     imports = [
         ../common
         ../common/wayland-wm
-    #    ./eww
 
+        ./waybar
         ../../terminals/alacritty.nix
     ];
 
@@ -28,6 +28,10 @@
         enableNvidiaPatches = true;
 
         settings = {
+            exec-once = [
+                "waybar"
+            ];
+            
             input = {
                 follow_mouse = 1;
             };
