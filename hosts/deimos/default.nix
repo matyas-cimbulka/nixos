@@ -8,9 +8,9 @@
         ../common/users/matyas
 
         ../common/optional/gnome.nix
-        ../common/optional/smartcards.nix
         ../common/optional/nvidia.nix
         ../common/optional/pipewire.nix
+        ../common/optional/smartcards.nix
     ];
 
     fileSystems = {
