@@ -25,7 +25,7 @@
     fonts = {
         fontconfig.enable = true;
 
-        fonts = with pkgs; [
+        packages = with pkgs; [
             nerdfonts
         ];
     };
