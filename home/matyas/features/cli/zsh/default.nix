@@ -29,11 +29,13 @@
       }
       {
         name = "sudo";
-        src = ./plugins/sudo.plugin.zsh;
+        src = ./plugins;
+        file = "sudo.plugin.zsh";
       }
       {
         name = "systemd";
-        src = ./plugins/systemd.plugin.zsh;
+        src = ./plugins;
+        file = "systemd.plugin.zsh";
       }
     ];
   };
