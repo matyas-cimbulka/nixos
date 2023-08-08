@@ -13,7 +13,10 @@
         ../common/optional/pipewire.nix
     ];
 
-    boot.loader.grub.useOSProber = true;
+    boot.loader.grub = {
+        useOSProber = true;
+        default = "saved";
+    };
 
     fileSystems = {
         "/".options = [ "compress=zstd:3" ];
