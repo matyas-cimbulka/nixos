@@ -8,7 +8,7 @@
         ../common/users/matyas
 
         ../common/optional/gnome.nix
-        ../common/optional/gpg.nix
+        ../common/optional/smartcards.nix
         ../common/optional/nvidia.nix
         ../common/optional/pipewire.nix
     ];

@@ -20,7 +20,6 @@
     oh-my-zsh = {
       enable = true;
       plugins = [
-        "gpg-agent"
         "sudo"
         "systemd"
       ];

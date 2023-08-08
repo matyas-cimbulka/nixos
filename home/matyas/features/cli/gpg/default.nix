@@ -12,16 +12,17 @@
         ];
     };
 
-    home.file = {
-        gpg-agent = {
-            enable = true;
-            source = ./gpg-agent.conf;
-            target = "${config.home.homeDirectory}/.gnupg/gpg-agent.conf";
-        };
-        sshcontrol = {
-            enable = true;
-            source = ./sshcontrol;
-            target = "${config.home.homeDirectory}/.gnupg/sshcontrol";
-        };
+    services.gpg-agent = {
+        enable = true;
+        enableSshSupport = true;
+        enableZshIntegration = true;
+        enableScDaemon = true;
+
+        pinentryFlavor = "gnome3";
+
+        sshKeys = [
+            "10DF1D66D37019480F1474ABF73E80E3703B113E"
+            "93EF47B4B4A54FE9EB3758EA32DB47EC3CBEBE18"
+        ];
     };
 }
