@@ -5,6 +5,7 @@
         ./gpg
         ./zsh
         
+        ./bat.nix
         ./btop.nix
         ./exa.nix
         ./git.nix

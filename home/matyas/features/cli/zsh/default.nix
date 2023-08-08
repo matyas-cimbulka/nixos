@@ -17,6 +17,10 @@
     initExtra = "source ~/.p10k.zsh";
     syntaxHighlighting.enable = true;
 
+    shellAliases = {
+      cat = "bat --paging=never";
+    };
+
     plugins = [
       {
         name = "powerlevel10k";
