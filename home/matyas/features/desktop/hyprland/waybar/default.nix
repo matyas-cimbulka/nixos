@@ -35,7 +35,7 @@
                 };
 
                 battery = {
-                    format = "{capacity}% {icon}";
+                    format = "{capacity}%  {icon}";
                     format-charging = "{capacity}% ";
                     format-plugged = "{capacity}% ";
                     format-icons = [ "" "" "" "" "" ];
@@ -50,7 +50,7 @@
                 };
 
                 backlight = {
-                    format = "{icon} {percent}%";
+                    format = "{icon}  {percent}%";
                     format-icons = [ "" ];
                 };
 

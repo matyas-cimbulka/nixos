@@ -7,7 +7,7 @@
         ../common/global
         ../common/users/matyas
 
-        ../common/optional/hyprland.nix
+        ../common/optional/gnome.nix
         ../common/optional/gpg.nix
         ../common/optional/nvidia.nix
         ../common/optional/pipewire.nix

@@ -4,8 +4,8 @@
     imports = [
         ../global
 
-        ../features/desktop/hyprland
-        ./hyprland.nix
+        ../features/desktop/gnome
+    #    ./hyprland.nix
     ];
 
     colorscheme = inputs.nix-colors.colorschemes.material-vivid;
