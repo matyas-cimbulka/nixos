@@ -7,6 +7,8 @@ in
     
     programs.helix = {
         enable = true;
+        defaultEditor = true;
+
         settings = {
             theme = colorscheme.slug;
             editor = {
