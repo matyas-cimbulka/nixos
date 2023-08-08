@@ -1,7 +1,5 @@
 { config, ... }:
-let
-    inherit (config) colorscheme;
-in
+
 {
     home.sessionVariables.COLORTERM = "truecolor";
     
@@ -10,7 +8,7 @@ in
         defaultEditor = true;
 
         settings = {
-            theme = colorscheme.slug;
+            theme = "github_dark";
             editor = {
                 color-modes = true;
                 line-number = "relative";
@@ -22,7 +20,11 @@ in
                 };
             };
         };
+    };
 
-        themes = import ./theme.nix { inherit colorscheme; };
+    home.file.themes = {
+        enable = true;
+        source = ./themes;
+        target = "${config.home.homeDirectory}/.config/helix/themes";
     };
 }
