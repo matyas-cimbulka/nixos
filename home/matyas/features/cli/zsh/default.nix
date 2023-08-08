@@ -28,6 +28,11 @@
         file = "share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
       }
       {
+        name = "gpg-agent";
+        src = ./plugins;
+        file = "gpg-agent.plugin.zsh";
+      }
+      {
         name = "sudo";
         src = ./plugins;
         file = "sudo.plugin.zsh";
