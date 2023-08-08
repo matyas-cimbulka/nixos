@@ -5,5 +5,6 @@
         bitwarden
         google-chrome
         vscode
+        plex-media-player
     ];
 }
