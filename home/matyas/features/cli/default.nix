@@ -17,5 +17,8 @@
         ncdu
     ];
 
-    programs.ripgrep.enable = true;
+    programs = {
+        ssh.enable = true;
+        ripgrep.enable = true;
+    };
 }

@@ -11,7 +11,7 @@
 
         extraConfig = {
             init.defaultBranch = "main";
-            core.editor = "vim";
+            core.editor = "hx";
         };
     };
 }
