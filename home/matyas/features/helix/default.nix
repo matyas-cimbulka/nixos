@@ -1,7 +1,9 @@
-{ config, ... }:
+{ config, pkgs, ... }:
 
 {
     home.sessionVariables.COLORTERM = "truecolor";
+
+    home.packages = [ pkgs.nil ];
     
     programs.helix = {
         enable = true;
@@ -12,6 +14,7 @@
             editor = {
                 color-modes = true;
                 line-number = "relative";
+                bufferline = "multiple";
                 indent-guides.render = true;
                 cursor-shape = {
                     normal = "block";
