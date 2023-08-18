@@ -6,6 +6,7 @@
         ./zsh
         
         ./bat.nix
+        ./bottom.nix        
         ./btop.nix
         ./exa.nix
         ./git.nix
