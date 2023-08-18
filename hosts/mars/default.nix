@@ -40,7 +40,7 @@
     };
 
     # Windows clock
-    time.hardwareClockInLocalTime = true;
+    # time.hardwareClockInLocalTime = true;
 
     system.stateVersion = "23.05";
 }
