@@ -7,6 +7,6 @@ in
 {
     system.autoUpgrade = {
         enable = isClean;
-        flake = git://gitlab.com/matyas.cimbulka/nixos-configuration;
+        flake = https://gitlab.com/matyas.cimbulka/nixos-configuration;
     };
 }
