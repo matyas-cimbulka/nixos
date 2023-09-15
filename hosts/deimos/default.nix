@@ -22,6 +22,11 @@
     networking = {
         hostName = "deimos";
         networkmanager.enable = true;
+        
+        hosts = {
+            "192.168.50.5" = [ "odroid-n2" ];
+            "192.168.50.6" = [ "odroid-m1" ];
+        };
     };
 
     services = {
