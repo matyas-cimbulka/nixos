@@ -5,5 +5,6 @@
         ../global
 
         ../features/desktop/gnome
+        ../features/jetbrains
     ];
 }
