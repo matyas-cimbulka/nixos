@@ -8,13 +8,6 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    hyprland.url = "github:hyprwm/Hyprland";
-
-    hyprland-contrib = {
-      url = "github:hyprwm/contrib";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
   
   outputs = { nixpkgs, home-manager, ... }@inputs: {
@@ -29,9 +22,9 @@
       };
       mars = nixpkgs.lib.nixosSystem {
         specialArgs = { inherit inputs; };
-	modules = [
-	  ./hosts/mars
-	];
+        modules = [
+          ./hosts/mars
+        ];
       };
     };
     
