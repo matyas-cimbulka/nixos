@@ -34,12 +34,12 @@
       "matyas@deimos" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.x86_64-linux;
         extraSpecialArgs = { inherit inputs; };
-        modules = [ ./home/matyas/deimos ];
+        modules = [ ./home/matyas/deimos.nix ];
       };
       "matyas@mars" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.x86_64-linux;
         extraSpecialArgs = { inherit inputs; };
-        modules = [ ./home/matyas/mars ];
+        modules = [ ./home/matyas/mars.nix ];
       };
     };
   };
