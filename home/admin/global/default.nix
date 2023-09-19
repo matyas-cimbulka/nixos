@@ -30,5 +30,5 @@
         packages = with pkgs; [
             home-manager
         ];
-    }
+    };
 }
