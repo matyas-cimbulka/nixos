@@ -1,5 +1,5 @@
 {
-    programs.enable.ssh = true;
+    programs.ssh.enable = true;
 
     home.file.".ssh/authorized_keys" = ''
         ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCiVB4pD9gll/GGNvxzQ0gkeUDAunOaWbrwSNYYzkO4FbNkl66QHxiY6nGtZizlJ05KFKfZgpxJ4onaSe2EqwDgJHSfd0Wt60yrGg5MCrmgfLCIKy4GFUDaX5cHDtxiJql2QDvkw0xBXmXgh3IeV3MU99cdY8zK6USrilcWPdloaK7/c047yjjhTbKvZhjtxn92Vw+P7XGjTwzM9nIOsjwVXnx27BNuOd7phMaiZBp2ePIXha2LqATK28KIqMYxXdfFUTmXyStnsTWh608+/xMQQZ4T10EDj8lRv29VYA7FMt1mwxx3K6CIomgj4KkguRZcQCNbJZhoylM/TI4+UcGp openpgp:0x2CB1C855
