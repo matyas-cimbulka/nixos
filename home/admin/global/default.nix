@@ -25,6 +25,10 @@
         username = lib.mkDefault "admin";
         homeDirectory = lib.mkDefault "/home/admin";
         stateVersion = lib.mkDefault "23.05";
-        sessionPath = [ "$HOME/.local/bin" ]
+        sessionPath = [ "$HOME/.local/bin" ];
+
+        packages = with pkgs; [
+            home-manager
+        ];
     }
 }
