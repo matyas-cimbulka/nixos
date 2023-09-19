@@ -3,7 +3,7 @@
 {
     imports = [
         ../features/cli
-        ../feauters/helix
+        ../features/helix
     ];
 
     nixpkgs = {
