@@ -2,9 +2,9 @@
 
 {
     imports = [
-        ../global
+        ./global
 
-        ../features/desktop/gnome
-        ../features/office
+        ./features/desktop/gnome
+        ./features/office
     ];
 }
