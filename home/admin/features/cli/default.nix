@@ -9,6 +9,7 @@
         ./btop.nix
         ./exa.nix
         ./git.nix
+        ./ssh.nix
         ./zellij.nix
     ];
 
