@@ -41,12 +41,12 @@
         extraSpecialArgs = { inherit inputs; };
         modules = [ ./home/matyas/mars.nix ];
       };
-      "admin@titan" = home-manger.lib.homeManagerConfiguration {
+      "admin@titan" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.aarch64-linux;
         extraSpecialArgs = { inherit inputs; };
         modules = [ ./home/admin/titan.nix ];
       };
-      "admin@europa" = home-manger.lib.homeManagerConfiguration {
+      "admin@europa" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.aarch64-linux;
         extraSpecialArgs = { inherit inputs; };
         modules = [ ./home/admin/europa.nix ];
