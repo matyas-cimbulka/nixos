@@ -6,7 +6,5 @@
 
         ../features/desktop/gnome
         ../features/office
-
-    #    ./hyprland.nix
     ];
 }
