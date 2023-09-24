@@ -1,5 +1,3 @@
-{ pkgs, inputs, ... }:
-
 {
     imports = [
         ./hardware-configuration.nix
@@ -11,6 +9,7 @@
         ../common/optional/smartcards.nix
         ../common/optional/nvidia.nix
         ../common/optional/pipewire.nix
+        ../common/optional/docker.nix
     ];
 
     boot.loader.grub = {
