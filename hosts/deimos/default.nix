@@ -11,6 +11,7 @@
         ../common/optional/nvidia.nix
         ../common/optional/pipewire.nix
         ../common/optional/smartcards.nix
+        ../common/optional/tailscale.nix
     ];
 
     fileSystems = {

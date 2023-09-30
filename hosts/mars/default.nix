@@ -10,6 +10,7 @@
         ../common/optional/nvidia.nix
         ../common/optional/pipewire.nix
         ../common/optional/docker.nix
+        ../common/optional/tailscale.nix
     ];
 
     boot.loader.grub = {
