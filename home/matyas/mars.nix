@@ -6,5 +6,7 @@
 
         ./features/desktop/gnome
         ./features/office
+        ./features/proton
+        ./features/vscode
     ];
 }
