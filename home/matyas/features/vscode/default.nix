@@ -8,5 +8,5 @@
             eamodio.gitlens
             bbenoist.nix
         ];
-    }
+    };
 }
