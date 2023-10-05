@@ -8,5 +8,6 @@ in
     system.autoUpgrade = {
         enable = isClean;
         flake = https://gitlab.com/matyas.cimbulka/nixos-configuration;
+        dates = "daily";
     };
 }
