@@ -2,21 +2,10 @@
     imports = [
         ./hardware-configuration.nix
         
-        ../common/global
-        ../common/users/matyas
-
-        ../common/optional/gnome.nix
-        ../common/optional/smartcards.nix
-        ../common/optional/nvidia.nix
-        ../common/optional/pipewire.nix
-        ../common/optional/docker.nix
-        ../common/optional/tailscale.nix
+        ../modules
+        ../profiles/users/matyas.nix
+        ../profiles/desktop
     ];
-
-    boot.loader.grub = {
-        useOSProber = true;
-        default = "saved";
-    };
 
     fileSystems = {
         "/".options = [ "compress=zstd:3" ];
@@ -24,30 +13,29 @@
         "/nix".options = [ "compress=zstd:6 noatime" ];
     };
 
-    networking = {
-        hostName = "mars";
-        networkmanager.enable = true;
+    utils = {
+        autoUpgrade.enable = true;
+        nix.enable = true;
+        nvidia.enable = true;
+        sound.enable = true;
 
-        hosts = {
-            "192.168.50.2" = [ "nas-1" ];
-            "192.168.50.5" = [ "titan" ];
-            "192.168.50.6" = [ "europa" ];
-            "100.75.74.38" = [ "titan.tailnet" ];
-            "100.106.236.108" = [ "europa.tailnet" ];
+        grub = {
+            enable = true;
+            dualBoot = true;
+        };
+
+        networking = {
+          hostName = "mars";
+          domain = "cimbulka.net";
         };
     };
 
     services = {
-        xserver = {
-            enable = true;
-            layout = "us";
-        };
-
-        printing.enable = true;
-        flatpak.enable = true;
+        gnome.enable = true;
+        smartcards.enable = true;
     };
 
-    # Windows clock
+    # Windows clock compatibility
     # time.hardwareClockInLocalTime = true;
 
     system.stateVersion = "23.05";
