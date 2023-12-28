@@ -7,6 +7,7 @@
 
         ../common/optional/gnome.nix
         ../common/optional/smartcards.nix
+        ../common/optional/steam.nix
         ../common/optional/nvidia.nix
         ../common/optional/pipewire.nix
         ../common/optional/docker.nix
