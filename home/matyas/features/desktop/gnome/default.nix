@@ -8,7 +8,7 @@
     home.packages = with pkgs; [
         blackbox-terminal
 
-        gnome.gedit
+        gedit
         gnome.gnome-tweaks
         
         gnomeExtensions.appindicator
