@@ -36,7 +36,7 @@
     services = {
         xserver = {
            enable = true;
-           layout = "gb";
+           xkb.layout = "gb";
            libinput.enable = true; 
         };
 

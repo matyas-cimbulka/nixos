@@ -16,6 +16,7 @@
     home.packages = with pkgs; [
         vim
         ncdu
+        jq
     ];
 
     programs = {
