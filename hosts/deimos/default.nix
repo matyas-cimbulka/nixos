@@ -12,6 +12,7 @@
         ../common/optional/pipewire.nix
         ../common/optional/smartcards.nix
         ../common/optional/tailscale.nix
+        ../common/optional/docker.nix
     ];
 
     fileSystems = {
