@@ -9,7 +9,7 @@
         };
         gc = {
             automatic = true;
-            dates = "weakly";
+            dates = "weekly";
             options = "--delete-older-then 2d";
         };
 
