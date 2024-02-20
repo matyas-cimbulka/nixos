@@ -23,7 +23,10 @@
         # ];
     };
 
-    services.xserver.xkb.layout = "us";
+    services.xserver = {
+        enable = true;
+        xkb.layout = "us";
+    };
 
     system.stateVersion = "24.05";
 }
