@@ -6,6 +6,7 @@
         ../common/users/admin
         
         ../common/optional/docker.nix
+        ../common/optional/sshd.nix
     ];
 
     boot.loader = {
