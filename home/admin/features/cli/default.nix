@@ -2,7 +2,6 @@
 
 {
     imports = [
-        ./ssh
         ./zsh
         
         ./bat.nix
