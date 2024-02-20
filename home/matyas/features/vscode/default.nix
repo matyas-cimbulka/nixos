@@ -30,6 +30,7 @@
             "[terraform]" = {
                 "editor.tabSize" = 2;
             };
+
         };
     };
 }
