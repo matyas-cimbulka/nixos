@@ -5,6 +5,7 @@
         ../common/global
         ../common/users/matyas
 
+        ../common/optional/grub.nix
         ../common/optional/gnome.nix
         ../common/optional/smartcards.nix
         ../common/optional/steam.nix

@@ -26,6 +26,12 @@
           ./hosts/mars
         ];
       };
+      europa = nixpkgs.lib.nixosSystem {
+        specialArgs = { inherit inputs; };
+        modules = [
+          ./hosts/europa
+        ];
+      };
     };
     
     # Entry point for home-manager configuration

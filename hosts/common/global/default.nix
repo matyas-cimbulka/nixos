@@ -6,7 +6,6 @@
     imports = [
         inputs.home-manager.nixosModules.home-manager
         ./auto-upgrade.nix
-        ./grub.nix
         ./nix.nix
     ];
 

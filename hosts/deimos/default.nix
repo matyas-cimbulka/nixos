@@ -7,6 +7,7 @@
         ../common/global
         ../common/users/matyas
 
+        ../common/optional/grub.nix
         ../common/optional/gnome.nix
         ../common/optional/nvidia.nix
         ../common/optional/pipewire.nix
