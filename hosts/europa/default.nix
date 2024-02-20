@@ -5,7 +5,7 @@
         ../common/global
         ../common/users/admin
         
-        ../common/optional/docker
+        ../common/optional/docker.nix
     ];
 
     boot.loader = {
@@ -17,9 +17,9 @@
         hostName = "europa";
         networkmanager.enable = true;
 
-        hosts = [
-
-        ];
+        # hosts = [
+        #
+        # ];
     };
 
     services.xserver.xkb.layout = "us";
