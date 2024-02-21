@@ -14,6 +14,6 @@
                 "*.titan.cimbulka.net"
                 "*.europa.cimbulka.net"
             ];
-        }
+        };
     };
 }
