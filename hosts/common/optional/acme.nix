@@ -8,7 +8,7 @@
         certs."cimbulka.net" = {
             dnsProvider = "cloudflare";
             environmentFile = "/mnt/ssd/config/cloudflare/credentials-nix";
-            group = config.services.admin.group;
+        #    group = config.services.admin.group;
             extraDomainNames = [
                 "*.cimbulka.net"
                 "*.titan.cimbulka.net"
