@@ -16,5 +16,8 @@
         gnomeExtensions.blur-my-shell
         gnomeExtensions.just-perfection
         gnomeExtensions.dash-to-dock
+        gnomeExtensions.forge
+        gnomeExtensions.vitals
+        gnomeExtensions.fly-pie
     ];
 }
