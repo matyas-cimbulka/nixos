@@ -17,6 +17,11 @@
       { device = "/dev/disk/by-uuid/44444444-4444-4444-8888-888888888888";
         fsType = "ext4";
       };
+    fileSystems."/mnt/hdd/volumes" = 
+      { device = "192.168.50.5";
+        fsType = "nfs";
+        options = [ "noauto" "x-systemd.automount" "x-systemd.idle-timeout=600" ];
+      };
 
     swapDevices = [ ];
 
