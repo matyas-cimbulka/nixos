@@ -18,7 +18,10 @@
             enable = true;
             efiSupport = true;
             efiInstallAsRemovable = true;
-            device = "nodev";
+            devices = [
+                "/dev/mmcblk1boot0"
+                "/dev/mmcblk1boot1"
+            ];
         };
     };
 
