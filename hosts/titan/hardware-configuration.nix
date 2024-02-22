@@ -8,14 +8,19 @@
     [ (modulesPath + "/installer/scan/not-detected.nix")
     ];
 
-    boot.initrd.availableKernelModules = [ ];
+    boot.initrd.availableKernelModules = [ "uas" ];
     boot.initrd.kernelModules = [ ];
     boot.kernelModules = [ ];
     boot.extraModulePackages =[ ];
 
     fileSystems."/" = 
-      { device = "/dev/disk/by-uuid/8d37117b-20af-46d6-aa32-2c018db80811";
+      { device = "/dev/disk/by-uuid/f8b8665e-ee00-4e88-b2d3-5a7091f42463";
         fsType = "ext4";
+      };
+
+    fileSystems."/efi" = 
+      { device = "/dev/disk/by-uuid/215A-881D";
+        fsType = "vfat";
       };
 
     fileSystems."/mnt/hdd" =

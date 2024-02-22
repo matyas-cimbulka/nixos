@@ -12,13 +12,16 @@
     ];
 
     boot.loader = {
-        efi.canTouchEfiVariables = false;
+        efi ={
+            canTouchEfiVariables = false;
+            efiSysMountPoint = "/efi";
+        };
 
         grub = {
             enable = true;
             efiSupport = true;
             efiInstallAsRemovable = true;
-            device = "nodev:";
+            device = "nodev";
             # devices = [
             #     "/dev/mmcblk1boot0"
             #     "/dev/mmcblk1boot1"
@@ -37,7 +40,7 @@
 
     services = {
         xserver = {
-            enable = false;
+            # enable = false;
             xkb.layout = "us";
         };
 
