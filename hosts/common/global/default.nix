@@ -22,13 +22,6 @@
     networking.domain = "cimbulka.net";
     
     time.timeZone = "Europe/Prague";
-    fonts = {
-        fontconfig.enable = true;
-
-        packages = with pkgs; [
-            nerdfonts
-        ];
-    };
 
     environment = {
         enableAllTerminfo = true;

@@ -10,6 +10,7 @@
         ../common/optional/grub.nix
         ../common/optional/gnome.nix
         ../common/optional/nvidia.nix
+        ../common/optional/fonts.nix
         ../common/optional/pipewire.nix
         ../common/optional/smartcards.nix
         ../common/optional/tailscale.nix

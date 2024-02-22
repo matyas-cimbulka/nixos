@@ -10,6 +10,7 @@
         ../common/optional/smartcards.nix
         ../common/optional/steam.nix
         ../common/optional/nvidia.nix
+        ../common/optional/fonts.nix
         ../common/optional/pipewire.nix
         ../common/optional/docker.nix
         ../common/optional/tailscale.nix
