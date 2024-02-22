@@ -8,6 +8,7 @@
         ../common/optional/acme.nix
         ../common/optional/docker.nix
         ../common/optional/sshd.nix
+        ../common/optional/fonts.nix
     ];
 
     boot.loader = {
