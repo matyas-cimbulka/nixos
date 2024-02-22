@@ -10,13 +10,15 @@
         ../common/optional/sshd.nix
     ];
 
-    # boot.loader = {
-    #     grub.enable = true;
-    # };
-
     boot.loader = {
-        grub.enable = false;
-        generic-extlinux-compatible.enable = true;
+        efi.canTouchEfiVariables = false;
+
+        grub = {
+            enable = true;
+            efiSupport = true;
+            efiInstallAsRemovable = true;
+            device = "nodev";
+        };
     };
 
     networking = {
@@ -30,7 +32,7 @@
 
     services = {
         xserver = {
-            enable = true;
+            enable = false;
             xkb.layout = "us";
         };
 
