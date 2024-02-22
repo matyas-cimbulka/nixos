@@ -10,8 +10,13 @@
         ../common/optional/sshd.nix
     ];
 
+    # boot.loader = {
+    #     grub.enable = true;
+    # };
+
     boot.loader = {
-        grub.enable = true;
+        grub.enable = false;
+        generic-extlinux-compatible.enable = true;
     };
 
     networking = {
