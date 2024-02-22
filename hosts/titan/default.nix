@@ -11,8 +11,7 @@
     ];
 
     boot.loader = {
-        grub.enable = false;
-        generic-extlinux-compatible.enable = true;
+        grub.enable = true;
     };
 
     networking = {
@@ -30,13 +29,13 @@
             xkb.layout = "us";
         };
 
-        nfs.server = {
-            enable = true;
+        # nfs.server = {
+        #     enable = true;
             
-            exports = ''
-                /mnt/hdd/volumes 192.168.50.6(rw,sync,no_root_squash,no_subtree_check,nohide)
-            '';
-        };
+        #     exports = ''
+        #         /mnt/hdd/volumes 192.168.50.6(rw,sync,no_root_squash,no_subtree_check,nohide)
+        #     '';
+        # };
     };
 
     system.stateVersion = "24.05";
