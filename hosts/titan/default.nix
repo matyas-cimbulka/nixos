@@ -1,6 +1,7 @@
 {
     imports = [
         ./hardware-configuration.nix
+        ./boot.nix
 
         ../common/global
         ../common/users/admin
@@ -10,24 +11,6 @@
         ../common/optional/sshd.nix
         ../common/optional/fonts.nix
     ];
-
-    boot.loader = {
-        efi ={
-            canTouchEfiVariables = false;
-            efiSysMountPoint = "/efi";
-        };
-
-        grub = {
-            enable = true;
-            efiSupport = true;
-            efiInstallAsRemovable = true;
-            device = "nodev";
-            # devices = [
-            #     "/dev/mmcblk1boot0"
-            #     "/dev/mmcblk1boot1"
-            # ];
-        };
-    };
 
     networking = {
         hostName = "titan";
