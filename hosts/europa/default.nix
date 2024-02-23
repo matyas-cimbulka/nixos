@@ -9,7 +9,6 @@
         
         ../common/optional/docker.nix
         ../common/optional/sshd.nix
-        ../common/optional/fonts.nix
     ];
 
 	boot.kernelPackages = pkgs.linuxPackages_latest;
