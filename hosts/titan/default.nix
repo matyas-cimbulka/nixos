@@ -26,13 +26,13 @@
             xkb.layout = "us";
         };
 
-        nfs.server = {
-            enable = true;
+        # nfs.server = {
+        #     enable = true;
             
-            exports = ''
-                /export/hdd 192.168.50.6(rw,sync,no_root_squash,no_subtree_check,nohide)
-            '';
-        };
+        #     exports = ''
+        #         /export/hdd 192.168.50.6(rw,sync,no_root_squash,no_subtree_check,nohide)
+        #     '';
+        # };
     };
 
     system.stateVersion = "24.05";
