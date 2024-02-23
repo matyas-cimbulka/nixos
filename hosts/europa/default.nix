@@ -10,6 +10,7 @@
         ../common/optional/fonts.nix
     ];
 
+	boot.kernelPackages = pkgs.linuxPackages_latest;
     boot.loader = {
         grub.enable = false;
         generic-extlinux-compatible.enable = true;
