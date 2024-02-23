@@ -18,14 +18,27 @@
         fsType = "ext4";
       };
 
-    fileSystems."/mnt/hdd" =
+    fileSystems."/mnt/hdd/volumes" =
       { device = "/dev/disk/by-uuid/7246680c-5060-4166-9e05-d09b135282e8";
         fsType = "btrfs";
+        options = [ "subvol=volumes" "compress=zstd:6" ];
       };
 
-    fileSystems."/mnt/ssd" =
+    fileSystems."/export/hdd" = 
+      { device = "/mnt/hdd";
+        options = [ "bind" ];
+      };
+
+    fileSystems."/mnt/ssd/volumes" =
       { device = "/dev/disk/by-uuid/bba3d297-6b13-471d-8bf8-33dbd73f6d77";
         fsType = "btrfs";
+        options = [ "subvol=volumes" "compress=zstd:3" ];
+      };
+
+    fileSystems."/mnt/ssd/config" =
+      { device = "/dev/disk/by-uuid/bba3d297-6b13-471d-8bf8-33dbd73f6d77";
+        fsType = "btrfs";
+        options = [ "subvol=config" "compress=zstd:3" ];
       };
 
     swapDevices = [ ];

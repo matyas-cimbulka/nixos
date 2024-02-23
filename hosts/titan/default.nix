@@ -30,7 +30,7 @@
             enable = true;
             
             exports = ''
-                /mnt/hdd/volumes 192.168.50.6(rw,sync,no_root_squash,no_subtree_check,nohide)
+                /export/hdd 192.168.50.6(rw,sync,no_root_squash,no_subtree_check,nohide)
             '';
         };
     };
