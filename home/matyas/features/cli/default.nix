@@ -18,10 +18,12 @@
         vim
         ncdu
         jq
+
+        openssh
     ];
 
     programs = {
-        ssh.enable = true;
+        # ssh.enable = true;
         ripgrep.enable = true;
     };
 }
