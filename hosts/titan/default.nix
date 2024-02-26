@@ -21,8 +21,6 @@
         };
     };
 
-    environment.systemPackages = with pkgs; [ nfs-utils ];
-
     services = {
         xserver = {
             # enable = false;
