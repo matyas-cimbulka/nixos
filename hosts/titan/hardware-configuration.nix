@@ -36,6 +36,21 @@
         options = [ "subvol=config" "compress=zstd:3" ];
       };
 
+    fileSystems."/export/hdd/volumes" =
+      { device = "/mnt/hdd/volumes";
+        options = [ "bind" ];
+      };
+
+    fileSystems."/export/ssd/volumes" =
+      { device = "/mnt/ssd/volumes";
+        options = [ "bind" ];
+      };
+
+    fileSystems."/export/ssd/config" =
+      { device = "/mnt/ssd/config";
+        options = [ "bind" ];
+      };
+
     swapDevices = [ ];
 
     # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
