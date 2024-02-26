@@ -11,10 +11,13 @@
         ../common/optional/sshd.nix
     ];
 
-	boot.kernelPackages = pkgs.linuxPackages_latest;
-    boot.loader = {
-        grub.enable = false;
-        generic-extlinux-compatible.enable = true;
+    boot = {
+        kernelPackages = pkgs.linuxPackages_latest;
+
+        loader = {
+            grub.enable = false;
+            generic-extlinux-compatible.enable = true;
+        };
     };
 
     networking = {
@@ -26,6 +29,8 @@
             "192.168.50.5" = [ "titan" ];
         };
     };
+
+    environment.systemPackages = with pkgs; [ nfs-utils ];
 
     services.xserver = {
         enable = true;

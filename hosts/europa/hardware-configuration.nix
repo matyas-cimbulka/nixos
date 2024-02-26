@@ -8,9 +8,10 @@
     [ (modulesPath + "/installer/scan/not-detected.nix")
     ];
 
-    boot.initrd.availableKernelModules = [ ];
-    boot.initrd.kernelModules = [ ];
-    boot.kernelModules = [ ];
+    boot.initrd.availableKernelModules = [ "nfs" ];
+    boot.initrd.kernelModules = [ "nfs" ];
+    boot.initrd.supportedFilesystem = [ "nfs" ];
+    boot.kernelModules = [ "nfs" ];
     boot.extraModulePackages =[ ];
 
     fileSystems."/" = 
