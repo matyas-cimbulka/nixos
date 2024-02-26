@@ -24,11 +24,6 @@
         options = [ "subvol=volumes" "compress=zstd:6" ];
       };
 
-    fileSystems."/export/hdd" = 
-      { device = "/mnt/hdd";
-        options = [ "bind" ];
-      };
-
     fileSystems."/mnt/ssd/volumes" =
       { device = "/dev/disk/by-uuid/bba3d297-6b13-471d-8bf8-33dbd73f6d77";
         fsType = "btrfs";

@@ -21,9 +21,10 @@
         hostName = "europa";
         networkmanager.enable = true;
 
-        # hosts = [
-        #
-        # ];
+        hosts = {
+            "192.168.50.2" = [ "nas-1" ];
+            "192.168.50.5" = [ "titan" ];
+        };
     };
 
     services.xserver = {
