@@ -33,7 +33,9 @@
             enable = true;
             
             exports = ''
-                /mnt/hdd/ 192.168.50.0/24(rw,sync,no_root_squash,no_subtree_check,nohide)
+                /mnt/hdd/volumes 192.168.50.0/24(rw,sync,no_root_squash,no_subtree_check,nohide)
+                /mnt/ssd/volumes 192.168.50.0/24(rw,sync,no_root_squash,no_subtree_check,nohide)
+                /mnt/ssd/config 192.168.50.0/24(rw,sync,no_root_squash,no_subtree_check,nohide)
             '';
         };
     };
