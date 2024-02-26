@@ -15,14 +15,6 @@
         hostName = "titan";
         networkmanager.enable = true;
 
-        interfaces.end0.ipv4.route = [
-            {
-                address = "10.0.10.0";
-                prefixLength = "24";
-                via = "192.168.50.220";
-            }
-        ];
-
         nat = {
             enable = true;
             forwardPorts = [
