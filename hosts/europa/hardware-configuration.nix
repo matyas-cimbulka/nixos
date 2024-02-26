@@ -10,7 +10,7 @@
 
     boot.initrd.availableKernelModules = [ "nfs" ];
     boot.initrd.kernelModules = [ "nfs" ];
-    boot.initrd.supportedFilesystem = [ "nfs" ];
+    boot.initrd.supportedFilesystems = [ "nfs" ];
     boot.kernelModules = [ "nfs" ];
     boot.extraModulePackages =[ ];
 

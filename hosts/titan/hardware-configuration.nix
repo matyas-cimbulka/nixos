@@ -8,8 +8,8 @@
     [ (modulesPath + "/installer/scan/not-detected.nix")
     ];
 
-    boot.initrd.availableKernelModules = [ "uas" ];
-    boot.initrd.kernelModules = [ ];
+    boot.initrd.availableKernelModules = [ "uas" "nfs" ];
+    boot.initrd.kernelModules = [ "nfs" ];
     boot.kernelModules = [ ];
     boot.extraModulePackages =[ ];
 
