@@ -19,6 +19,8 @@
             "192.168.50.2" = [ "nas-1" ];
             "192.168.50.6" = [ "europa" ];
         };
+
+        firewall.allowedTCPPorts = [ 2049 ];
     };
 
     services = {
@@ -34,9 +36,9 @@
             
             exports = ''
                 /export 192.168.50.0/24(rw,fsid=0,no_subtree_check)
-                /export/hdd/volumes 192.168.50.0/24(rw,sync,no_root_squash,no_subtree_check,nohide,insecure)
-                /export/ssd/volumes 192.168.50.0/24(rw,sync,no_root_squash,no_subtree_check,nohide,insecure)
-                /export/ssd/config 192.168.50.0/24(rw,sync,no_root_squash,no_subtree_check,nohide,insecure)
+                /export/hdd/volumes 192.168.50.0/24(rw,sync,no_subtree_check,nohide,insecure)
+                /export/ssd/volumes 192.168.50.0/24(rw,sync,no_subtree_check,nohide,insecure)
+                /export/ssd/config 192.168.50.0/24(rw,sync,no_subtree_check,nohide,insecure)
             '';
         };
     };

@@ -19,11 +19,23 @@
         fsType = "ext4";
       };
 
-    # fileSystems."/mnt/hdd" = 
-    #   { device = "titan:/mnt/hdd";
-    #     fsType = "nfs";
-    #     options = [ "noauto" "x-systemd.automount" "x-systemd.idle-timeout=600" ];
-    #   };
+    fileSystems."/mnt/hdd/volumes" = 
+      { device = "titan:/hdd/volumes";
+        fsType = "nfs";
+        options = [ "noauto" "x-systemd.automount" "x-systemd.idle-timeout=600" ];
+      };
+
+    fileSystems."/mnt/ssd/volumes" = 
+      { device = "titan:/ssd/volumes";
+        fsType = "nfs";
+        options = [ "noauto" "x-systemd.automount" "x-systemd.idle-timeout=600" ];
+      };
+
+    fileSystems."/mnt/ssd/config" = 
+      { device = "titan:/ssd/config";
+        fsType = "nfs";
+        options = [ "noauto" "x-systemd.automount" "x-systemd.idle-timeout=600" ];
+      };
 
     swapDevices = [ ];
 
