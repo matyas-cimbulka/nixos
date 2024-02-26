@@ -19,11 +19,11 @@
         fsType = "ext4";
       };
 
-    fileSystems."/mnt/hdd" = 
-      { device = "titan:/mnt/hdd";
-        fsType = "nfs";
-        options = [ "noauto" "x-systemd.automount" "x-systemd.idle-timeout=600" ];
-      };
+    # fileSystems."/mnt/hdd" = 
+    #   { device = "titan:/mnt/hdd";
+    #     fsType = "nfs";
+    #     options = [ "noauto" "x-systemd.automount" "x-systemd.idle-timeout=600" ];
+    #   };
 
     swapDevices = [ ];
 

@@ -27,11 +27,13 @@
             xkb.layout = "us";
         };
 
+        rpcbind.enable = true;
+
         nfs.server = {
             enable = true;
             
             exports = ''
-                /mnt/hdd/ 192.168.50.6(rw,sync,no_root_squash,no_subtree_check,nohide)
+                /mnt/hdd/ 192.168.50.0/24(rw,sync,no_root_squash,no_subtree_check,nohide)
             '';
         };
     };
