@@ -2,6 +2,7 @@
     imports = [
         ./hardware-configuration.nix
         ./boot.nix
+        ./nomad.nix
 
         ../common/global
         ../common/users/admin
@@ -9,7 +10,6 @@
         ../common/optional/acme.nix
         ../common/optional/docker.nix
         ../common/optional/sshd.nix
-        ../common/optional/nomad.nix
     ];
 
     networking = {

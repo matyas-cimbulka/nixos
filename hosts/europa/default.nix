@@ -3,6 +3,7 @@
 {
     imports = [
         ./hardware-configuration.nix
+        ./nomad.nix
 
         ../common/global
         ../common/users/admin
