@@ -3,9 +3,17 @@
         enable = true;
 
         settings = {
+            datacenter = "homelab";
+
+            bind_addr = "0.0.0.0";
+
             client = {
                 enabled = true;
-                servers = [ "192.168.50.5" ];
+                server_join = {
+                    retry_join = [ "192.168.50.5" ];
+                    retry_max = 3;
+                    retry_interval = "15s";
+                };
 #                network_interface = "vlan10@end0";
             };
         };
