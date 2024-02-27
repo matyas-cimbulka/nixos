@@ -2,6 +2,9 @@
     services.nomad = {
         enable = true;
 
+        enableDocker = true;
+        dropPrivileges = false;
+
         settings = {
             datacenter = "homelab";
 
