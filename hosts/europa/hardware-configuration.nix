@@ -9,7 +9,7 @@
     ];
 
     boot.initrd.availableKernelModules = [ "nfs" ];
-    boot.initrd.kernelModules = [ "nfs" ];
+    boot.initrd.kernelModules = [ "nfs" "phy-rockchip-naneng-combphy" "phy-rockchip-snps-pcie3" ];
     boot.initrd.supportedFilesystems = [ "nfs" ];
     boot.kernelModules = [ "nfs" ];
     boot.extraModulePackages =[ ];

@@ -2,10 +2,19 @@
     services.nomad = {
         enable = true;
 
+        enableDocker = true;
+        dropPrivileges = false;
+
         settings = {
             datacenter = "homelab";
 
             bind_addr = "0.0.0.0";
+
+            advertise = {
+                http = "192.168.50.5";
+                rpc = "192.168.50.5:4647";
+                serf = "192.168.50.5";
+            };
 
             server = {
                 enabled = true;

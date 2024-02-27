@@ -14,12 +14,15 @@
 
     boot = {
         kernelPackages = pkgs.linuxPackages_latest;
+        kernelParams = ["console=ttyS2,1500000"];
 
         loader = {
             grub.enable = false;
             generic-extlinux-compatible.enable = true;
         };
     };
+
+    hardware.deviceTree.name = "rockchip/rk3568-odroid-m1.dtb";
 
     networking = {
         hostName = "europa";
