@@ -24,7 +24,7 @@
         firewall.allowedTCPPorts = [ 2049 ];
 
         vlans = {
-            vlan10 = { id = 10; interface = "end0" };
+            vlan10 = { id = 10; interface = "end0"; };
         };
 
         interfaces.vlan10.ipv4.addresses = [{
