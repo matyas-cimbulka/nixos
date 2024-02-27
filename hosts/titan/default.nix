@@ -9,6 +9,7 @@
         ../common/optional/acme.nix
         ../common/optional/docker.nix
         ../common/optional/sshd.nix
+        ../common/optional/nomad.nix
     ];
 
     networking = {
@@ -21,6 +22,15 @@
         };
 
         firewall.allowedTCPPorts = [ 2049 ];
+
+        vlans = {
+            vlan10 = { id = 10; interface = "end0" };
+        };
+
+        interfaces.vlan10.ipv4.addresses = [{
+            address = "10.0.10.2";
+            prefixLength = 24;
+        }];
     };
 
     services = {
