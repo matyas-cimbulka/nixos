@@ -4,6 +4,7 @@
     imports = [
         ./hardware-configuration.nix
         ./nomad.nix
+        ./consul.nix
 
         ../common/global
         ../common/users/admin

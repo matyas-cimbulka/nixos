@@ -9,11 +9,11 @@
         webUi = true;
 
         extraConfig = {
-            node_name = "titan";
+            node_name = "europa";
             server = true;
             datacenter = "homelab";
 
-            data_dir = "/mnt/ssd/volumes/consul/titan/";
+            data_dir = "/mnt/ssd/volumes/consul/europa/";
 
             addresses = {
                 http = "0.0.0.0";
