@@ -3,6 +3,7 @@
         ./hardware-configuration.nix
         ./boot.nix
         ./nomad.nix
+        ./consul.nix
 
         ../common/global
         ../common/users/admin
@@ -21,7 +22,7 @@
             "192.168.50.6" = [ "europa" ];
         };
 
-        firewall.allowedTCPPorts = [ 2049 4646 4647 4648 ];
+        firewall.allowedTCPPorts = [ 2049 4646 4647 4648 8500 8600 ];
 
         vlans = {
             vlan10 = { id = 10; interface = "end0"; };

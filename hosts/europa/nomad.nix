@@ -19,6 +19,10 @@
                 };
 #                network_interface = "vlan10@end0";
             };
+
+            consul = {
+                address = "192.168.50.5:8500";
+            };
         };
     };
 }

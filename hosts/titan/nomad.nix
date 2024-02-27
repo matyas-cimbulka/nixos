@@ -30,6 +30,10 @@
                 servers = [ "192.168.50.5" ];
 #                network_interface = "vlan10@end0";
             };
+
+            consul = {
+                address = "127.0.0.1:8500";
+            };
         };
     };
 }
