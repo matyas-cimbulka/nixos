@@ -10,7 +10,6 @@
         
         ../common/optional/docker.nix
         ../common/optional/sshd.nix
-        ../common/optional/nomad.nix
     ];
 
     boot = {
