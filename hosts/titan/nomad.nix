@@ -11,9 +11,9 @@
             bind_addr = "0.0.0.0";
 
             advertise = {
-                http = "192.168.50.5";
-                rpc = "192.168.50.5:4647";
-                serf = "192.168.50.5";
+                http = "10.0.10.2";
+                rpc = "10.0.10.2:4647";
+                serf = "10.0.10.2";
             };
 
             server = {
@@ -27,12 +27,11 @@
 
             client = {
                 enabled = true;
-                servers = [ "192.168.50.5" ];
-#                network_interface = "vlan10@end0";
+                servers = [ "10.0.10.2" ];
             };
 
             consul = {
-                address = "127.0.0.1:8500";
+                address = "127.0.0.1:8505";
             };
         };
     };

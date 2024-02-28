@@ -22,7 +22,7 @@
             "192.168.50.6" = [ "europa" ];
         };
 
-        firewall.allowedTCPPorts = [ 2049 4646 4647 4648 8500 8600 ];
+        firewall.allowedTCPPorts = [ 2049 4646 4647 4648 8505 ];
 
         vlans = {
             vlan10 = { id = 10; interface = "end0"; };
