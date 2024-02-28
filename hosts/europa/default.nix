@@ -34,6 +34,8 @@
             "192.168.50.5" = [ "titan" ];
         };
 
+        firewall.allowedTCPPorts = [ 8301 8302 8500 8501 8502 8503 8600 ];
+
         vlans = {
             vlan10 = { id = 10; interface = "end0"; };
         };

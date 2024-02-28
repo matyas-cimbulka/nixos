@@ -17,11 +17,6 @@
                     retry_max = 3;
                     retry_interval = "15s";
                 };
-#                network_interface = "vlan10@end0";
-            };
-
-            consul = {
-                address = "127.0.0.1:8500";
             };
         };
     };
