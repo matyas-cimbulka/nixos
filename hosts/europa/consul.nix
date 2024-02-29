@@ -7,12 +7,14 @@
         8503
         8600
     ];
+    
+    systemd.services.consul.environment = {
+        HOME = "/root";
+    };
 
     services.consul = {
         enable = true;
         dropPrivileges = false;
-
-        webUi = true;
 
         extraConfig = {
             node_name = "europa";

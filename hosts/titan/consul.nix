@@ -9,6 +9,10 @@
         8505
         8600
     ];
+    
+    systemd.services.consul.environment = {
+        HOME = "/root";
+    };
 
     services.consul = {
         enable = true;
