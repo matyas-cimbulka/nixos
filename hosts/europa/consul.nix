@@ -18,6 +18,7 @@
             node_name = "europa";
             server = false;
             datacenter = "homelab";
+            data_dir = "/opt/consul";
 
             advertise_addr = "10.0.10.3";
             bind_addr = "0.0.0.0";

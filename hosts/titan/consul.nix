@@ -21,7 +21,7 @@
             server = true;
             bootstrap_expect = 1;
             datacenter = "homelab";
-            data_dir = "/mnt/ssd/volumes/consul/titan/";
+            data_dir = "/opt/consul";
 
             advertise_addr = "10.0.10.2";
             bind_addr = "0.0.0.0";
