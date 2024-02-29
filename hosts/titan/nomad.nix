@@ -1,4 +1,10 @@
 {
+    networking.firewall.allowedTCPPorts = [
+        4646
+        4647
+        4648
+    ];
+
     services.nomad = {
         enable = true;
 

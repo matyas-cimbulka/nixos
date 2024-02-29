@@ -1,4 +1,15 @@
 {
+    networking.firewall.allowedTCPPorts = [
+        8300
+        8301
+        8302
+        8501
+        8502
+        8503
+        8505
+        8600
+    ];
+
     services.consul = {
         enable = true;
         dropPrivileges = false;
