@@ -3,6 +3,6 @@
 {
     home.packages = with pkgs; [
         google-chrome
-        plex-media-player
+        warp-terminal
     ];
 }
