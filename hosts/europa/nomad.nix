@@ -5,11 +5,15 @@
         4648
     ];
 
+    environment.etc."nomad".source = ../common.nomad;
+
     services.nomad = {
         enable = true;
 
         enableDocker = true;
         dropPrivileges = false;
+
+        extraSettingsPaths = [ "/etc/nomad" ];
 
         settings = {
             datacenter = "homelab";
