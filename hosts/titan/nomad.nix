@@ -5,7 +5,7 @@
         4648
     ];
 
-    environment.etc."nomad".source = ../common.nomad;
+    environment.etc."nomad".source = ../common/nomad;
 
     services.nomad = {
         enable = true;
