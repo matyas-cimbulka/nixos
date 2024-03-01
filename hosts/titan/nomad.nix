@@ -1,3 +1,5 @@
+{ pkgs, ... }:
+
 {
     networking.firewall.allowedTCPPorts = [
         4646
@@ -5,7 +7,11 @@
         4648
     ];
 
-    environment.etc."nomad".source = ../common/nomad;
+    environment = {
+        etc."nomad".source = ../common/nomad;
+
+        systemPackages = with pkgs; [ cni-plugins ];
+    };
 
     services.nomad = {
         enable = true;
@@ -39,6 +45,7 @@
             client = {
                 enabled = true;
                 servers = [ "10.0.10.2" ];
+                cni_path = "${pkgs.cni-plugins}/bin";
             };
 
             consul = {

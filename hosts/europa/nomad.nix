@@ -5,7 +5,11 @@
         4648
     ];
 
-    environment.etc."nomad".source = ../common/nomad;
+    environment = {
+        etc."nomad".source = ../common/nomad;
+
+        systemPackages = with pkgs; [ cni-plugins ];
+    };
 
     services.nomad = {
         enable = true;
@@ -13,6 +17,7 @@
         enableDocker = true;
         dropPrivileges = false;
 
+        extraPackages = with pkgs; [ consul ];
         extraSettingsPaths = [ "/etc/nomad" ];
 
         settings = {
@@ -28,6 +33,7 @@
                     retry_max = 3;
                     retry_interval = "15s";
                 };
+                cni_path = "${pkgs.cni-plugins}/bin";
             };
         };
     };
