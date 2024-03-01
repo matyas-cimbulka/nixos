@@ -48,10 +48,6 @@
                 servers = [ "10.0.10.2" ];
                 cni_path = "${pkgs.cni-plugins}/bin";
             };
-
-            consul = {
-                address = "127.0.0.1:8505";
-            };
         };
     };
 }

@@ -3,10 +3,10 @@
         8300
         8301
         8302
+        8500
         8501
         8502
         8503
-        8505
         8600
     ];
     
@@ -32,10 +32,6 @@
 
             addresses = {
                 http = "0.0.0.0";
-            };
-
-            ports = {
-                http = 8505;
             };
 
             encrypt = "b1XsNgdcXXT+8kHI7tvRwpN3wp//A283wU6qVu4FmP0=";
