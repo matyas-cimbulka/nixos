@@ -34,6 +34,10 @@
                 http = "0.0.0.0";
             };
 
+            ports = {
+                grpc = 8502;
+            };
+
             encrypt = "b1XsNgdcXXT+8kHI7tvRwpN3wp//A283wU6qVu4FmP0=";
             encrypt_verify_incoming = false;
             encrypt_verify_outgoing = false;
