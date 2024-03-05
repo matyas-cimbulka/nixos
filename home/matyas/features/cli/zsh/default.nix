@@ -4,7 +4,7 @@
   home = {
     file.p10k-config = {
       enable = true;
-      source = ./p10k.zsh;
+      source = ./single-line-p10k.zsh;
       target = "${config.home.homeDirectory}/.p10k.zsh";
     };
   };
