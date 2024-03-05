@@ -1,33 +1,12 @@
 { pkgs, ... }:
 
 {
-    networking.firewall.allowedTCPPorts = [
-        4646
-        4647
-        4648
+    imports = [
+        ../common/optional/nomad
     ];
 
-    environment = {
-        etc."nomad".source = ../common/nomad;
-
-        systemPackages = with pkgs; [ cni-plugins ];
-    };
-
     services.nomad = {
-        enable = true;
-
-        enableDocker = true;
-        dropPrivileges = false;
-
-        extraPackages = with pkgs; [ consul ];
-        extraSettingsPaths = [ "/etc/nomad" ];
-
         settings = {
-            datacenter = "homelab";
-            data_dir = "/opt/nomad";
-
-            bind_addr = "0.0.0.0";
-
             advertise = {
                 http = "10.0.10.2";
                 rpc = "10.0.10.2:4647";
@@ -44,9 +23,7 @@
             };
 
             client = {
-                enabled = true;
                 servers = [ "10.0.10.2" ];
-                cni_path = "${pkgs.cni-plugins}/bin";
             };
         };
     };
