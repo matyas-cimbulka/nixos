@@ -4,9 +4,6 @@
     ];
 
     services.consul = {
-        enable = true;
-        dropPrivileges = false;
-
         extraConfig = {
             node_name = "europa";
             server = false;
