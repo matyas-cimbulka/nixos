@@ -8,8 +8,10 @@
         ./bat.nix
         ./bottom.nix        
         ./btop.nix
+        ./consul.nix
         ./exa.nix
         ./git.nix
+        ./nomad.nix
         ./zellij.nix
         ./zoxide.nix
     ];
