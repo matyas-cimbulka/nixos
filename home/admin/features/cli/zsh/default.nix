@@ -15,7 +15,7 @@
     enableAutosuggestions = true;
     enableCompletion = true;
     initExtraFirst = "source ~/.p10k.zsh";
-    initExtra = ''printf '\eP$f{"hook": "SourcedRcFileForWarp", "value": { "shell": "zsh"}}\x9c' '';
+    # initExtra = ''printf '\eP$f{"hook": "SourcedRcFileForWarp", "value": { "shell": "zsh"}}\x9c' '';
 
     syntaxHighlighting.enable = true;
 
