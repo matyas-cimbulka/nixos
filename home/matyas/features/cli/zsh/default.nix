@@ -14,7 +14,9 @@
     autocd = true;
     enableAutosuggestions = true;
     enableCompletion = true;
-    initExtra = "source ~/.p10k.zsh";
+    initExtraFirst = "source ~/.p10k.zsh";
+    initExtra = ''printf '\eP$f{"hook": "SourcedRcFileForWarp", "value": { "shell": "zsh"}}\x9c' '';
+
     syntaxHighlighting.enable = true;
 
     shellAliases = {
