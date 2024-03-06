@@ -43,6 +43,11 @@
         file = "systemd.plugin.zsh";
       }
       {
+        name = "zsh-ssh";
+        src = ./plugins;
+        file = "zsh-ssh.plugin.zsh";
+      }
+      {
         name = "autocomplete";
         src = pkgs.fetchFromGitHub {
           owner = "marlonrichert";
