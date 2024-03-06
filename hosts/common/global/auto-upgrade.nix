@@ -7,7 +7,7 @@ in
 {
     system.autoUpgrade = {
         enable = isClean;
-        flake = "gitlab:matyas.cimbulka/nixos-configuration";
+        flake = "github:matyas-cimbulka/nixos";
         dates = "daily";
     };
 }
