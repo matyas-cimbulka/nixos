@@ -1,0 +1,26 @@
+name: update-flake-lock
+on:
+  workflow_dispatch:
+  schedule:
+    - cron : '0 0 * * *'
+
+jobs:
+  lockfile:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: staging
+      - name: Install Nix
+        uses: cachix/install-nix-action@v25
+        with:
+          github_access_token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Update flake.lock
+        run: nix flake update
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v6
+        with:
+          branch: auto-updates
+          commit-message: 'chore: updates flake inputs'
+          title: Update of flake inputs
