@@ -12,5 +12,5 @@ jobs:
         uses: cachix/install-nix-action@v25
         with:
           github_access_token: ${{ secrets.GITHUB_TOKEN }}
-      - name: Update flake.lock
+      - name: Check flake
         run: nix flake check
