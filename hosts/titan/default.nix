@@ -11,6 +11,7 @@
         ../common/optional/acme.nix
         ../common/optional/docker.nix
         ../common/optional/sshd.nix
+        ../common/optional/vault.nix
     ];
 
     networking = {
