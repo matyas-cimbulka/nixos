@@ -30,7 +30,7 @@
             "[terraform]" = {
                 "editor.tabSize" = 2;
             };
-
+            "terminal.external.linuxExec" = "warp-terminal";
         };
     };
 }

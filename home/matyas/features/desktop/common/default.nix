@@ -5,6 +5,7 @@
         anytype
         
         google-chrome
+        yubioath-flutter
         warp-terminal
     ];
 }
