@@ -1,9 +1,9 @@
 { lib, config, ... }:
 with lib;
 let
-  cfg = config.utils.sound;
+  cfg = config.modules.sound;
 in {
-  options.utils.sound = {
+  options.modules.sound = {
     enable = mkEnableOption "enable sound config";
     jack = mkOption {
       type = types.bool;

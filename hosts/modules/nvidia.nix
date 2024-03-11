@@ -1,9 +1,9 @@
 { lib, config, ... }:
 with lib;
 let
-  cfg = config.utils.nvidia;
+  cfg = config.modules.nvidia;
 in {
-  options.utils.nvidia = {
+  options.modules.nvidia = {
     enable = mkEnableOption "enable nvidia config";
     prime = mkOption {
       type = types.bool;

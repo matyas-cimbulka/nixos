@@ -1,9 +1,9 @@
 { lib, config, ... }:
 with lib;
 let
-  cfg = config.utils.grub;
+  cfg = config.modules.grub;
 in {
-  options.utils.grub = {
+  options.modules.grub = {
     enable = mkEnableOption "enable grub setup";
     dualBoot = mkOption {
       type = types.bool;
@@ -22,6 +22,7 @@ in {
         enable = true;
         efiSupport = true;
         device = "nodev";
+        configurationLimit = 5;
 
         useOSProber = cfg.dualBoot;
         default = mkIf cfg.dualBoot "saved";

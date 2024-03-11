@@ -1,9 +1,9 @@
 { lib, config, inputs, ... }:
 with lib;
 let
-  cfg = config.utils.nix;
+  cfg = config.modules.nix;
 in {
-  options.utils.nix = {
+  options.modules.nix = {
     enable = mkEnableOption "enable nix config";
 
     allowUnfree = mkOption {
@@ -32,8 +32,8 @@ in {
 
       gc = mkIf cfg.garbageCollection {
           automatic = true;
-          dates = "weakly";
-          options = "--delete-older-then 15d";
+          dates = "weekly";
+          options = "--delete-older-then 14d";
       };
 
       registry = mapAttrs (_: value: { flake = value; }) inputs;

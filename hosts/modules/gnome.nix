@@ -1,9 +1,9 @@
 { lib, config, pkgs, ... }:
 with lib;
 let
-  cfg = config.services.gnome;
+  cfg = config.modules.gnome;
 in {
-  options.services.gnome = {
+  options.modules.gnome = {
     enable = mkEnableOption "enable gnome DE";
   };
 

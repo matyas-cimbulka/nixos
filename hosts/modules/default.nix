@@ -1,6 +1,10 @@
 {
     imports = [
+        ./nomad
+
+        ./acme.nix
         ./auto-upgrade.nix
+        ./consul.nix
         ./gnome.nix
         ./grub.nix
         ./networking.nix

@@ -1,9 +1,9 @@
 { lib, config, ... }:
 with lib;
 let
-  cfg = config.services.smartcards;
+  cfg = config.modules.smartcards;
 in {
-  options.services.smartcards = {
+  options.modules.smartcards = {
     enable = mkEnableOption "enable smartcards service";
   };
 
