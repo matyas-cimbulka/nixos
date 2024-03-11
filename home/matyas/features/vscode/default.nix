@@ -9,6 +9,7 @@
             bbenoist.nix
 
             hashicorp.terraform
+            pkief.material-icon-theme
 
             rust-lang.rust-analyzer
             serayuzgur.crates
@@ -30,7 +31,7 @@
             "[terraform]" = {
                 "editor.tabSize" = 2;
             };
-
+            "workbench.iconTheme" = "material-icon-theme";
         };
     };
 }
