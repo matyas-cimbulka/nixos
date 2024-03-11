@@ -35,7 +35,7 @@
 
     xserver = {
       enable = true;
-      layout = "us";
+      xkb.layout = "us";
     };
 
     printing.enable = true;

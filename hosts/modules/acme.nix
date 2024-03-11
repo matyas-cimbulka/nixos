@@ -11,6 +11,6 @@ in {
         security.acme = {
             acceptTerms = true;
             defaults.email = "matyas.cimbulka@gmail.com";
-        }
+        };
     };
 }

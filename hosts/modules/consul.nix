@@ -12,12 +12,12 @@ in {
         };
 
         nodeName = mkOption {
-            type = types.string;
+            type = types.str;
             default = null;
         };
 
         ui = mkOption {
-            type = types.string;
+            type = types.bool;
             default = false;
         };
     };

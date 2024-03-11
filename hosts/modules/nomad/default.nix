@@ -18,7 +18,7 @@ in {
     };
 
     config = mkIf cfg.enable {
-        networking.firewall.allowedTCPPorts = mkIf cfg.openPorts [
+        networking.firewall.allowedTCPPorts = mkIf cfg.openFirewall [
             4646
             4647
             4648
@@ -52,7 +52,7 @@ in {
                 ui = {
                     enabled = cfg.ui;
                 };
-            }
+            };
         };
-    }
+    };
 }

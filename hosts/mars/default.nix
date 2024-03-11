@@ -13,11 +13,13 @@
         "/nix".options = [ "compress=zstd:6 noatime" ];
     };
 
-    utils = {
+    modules = {
         autoUpgrade.enable = true;
         nix.enable = true;
         nvidia.enable = true;
         sound.enable = true;
+        smartcards.enable = true;
+        gnome.enable = true;
 
         grub = {
             enable = true;
@@ -25,9 +27,16 @@
         };
 
         networking = {
+          enable = true;
           hostName = "mars";
           domain = "cimbulka.net";
         };
+    };
+
+    networking.hosts = {
+        "192.168.50.2" = [ "nas-1" ];
+        "192.168.50.5" = [ "titan" ];
+        "192.168.50.6" = [ "europa" ];
     };
 
     services = {
@@ -38,9 +47,9 @@
 
         printing.enable = true;
         flatpak.enable = true;
-        gnome.enable = true;
-        smartcards.enable = true;
     };
+
+    home-manager.users.matyas = import ../../home/matyas/mars.nix;
 
     # Windows clock compatibility
     # time.hardwareClockInLocalTime = true;

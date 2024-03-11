@@ -1,6 +1,6 @@
 {
     imports = [
-        ../../modules/nomad.nix
+        ../../modules/nomad
     ];
 
     modules.nomad = {
