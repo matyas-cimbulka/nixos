@@ -26,9 +26,11 @@
             "debug.console.fontFamily" = "FiraMono Nerd Font";
             "terminal.integrated.fontFamily" = "FiraMono Nerd Font";
             "explorer.confirmDelete" = false;
+            "svelte.enable-ts-plugin" = true;
             "[terraform]" = {
                 "editor.tabSize" = 2;
             };
+
         };
     };
 }

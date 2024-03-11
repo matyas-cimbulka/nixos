@@ -8,7 +8,7 @@
     home.packages = with pkgs; [
         blackbox-terminal
 
-        gnome.gedit
+        gedit
         gnome.gnome-tweaks
         
         gnomeExtensions.appindicator
@@ -16,5 +16,8 @@
         gnomeExtensions.blur-my-shell
         gnomeExtensions.just-perfection
         gnomeExtensions.dash-to-dock
+        gnomeExtensions.forge
+        gnomeExtensions.vitals
+        gnomeExtensions.fly-pie
     ];
 }

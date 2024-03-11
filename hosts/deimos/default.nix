@@ -7,11 +7,14 @@
         ../common/global
         ../common/users/matyas
 
+        ../common/optional/grub.nix
         ../common/optional/gnome.nix
         ../common/optional/nvidia.nix
+        ../common/optional/fonts.nix
         ../common/optional/pipewire.nix
         ../common/optional/smartcards.nix
         ../common/optional/tailscale.nix
+        ../common/optional/docker.nix
     ];
 
     fileSystems = {
@@ -36,7 +39,7 @@
     services = {
         xserver = {
            enable = true;
-           layout = "gb";
+           xkb.layout = "gb";
            libinput.enable = true; 
         };
 

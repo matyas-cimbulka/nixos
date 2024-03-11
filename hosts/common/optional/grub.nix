@@ -1,4 +1,8 @@
+{ pkgs, ... }:
+
 {
+    boot.kernelPackages = pkgs.linuxPackages_latest;
+
     boot.loader = {
         efi = {
             canTouchEfiVariables = true;
@@ -9,6 +13,7 @@
             enable = true;
             efiSupport = true;
             device = "nodev";
+            configurationLimit = 5;
         };
     };
 }

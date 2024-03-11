@@ -26,6 +26,18 @@
           ./hosts/mars
         ];
       };
+      titan = nixpkgs.lib.nixosSystem {
+        specialArgs = { inherit inputs; };
+        modules = [
+          ./hosts/titan
+        ];
+      };
+      europa = nixpkgs.lib.nixosSystem {
+        specialArgs = { inherit inputs; };
+        modules = [
+          ./hosts/europa
+        ];
+      };
     };
     
     # Entry point for home-manager configuration

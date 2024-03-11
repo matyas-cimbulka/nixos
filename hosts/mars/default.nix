@@ -31,6 +31,13 @@
     };
 
     services = {
+        xserver = {
+            enable = true;
+            xkb.layout = "us";
+        };
+
+        printing.enable = true;
+        flatpak.enable = true;
         gnome.enable = true;
         smartcards.enable = true;
     };

@@ -1,7 +1,8 @@
 { pkgs, ... }:
 
 {
-    environment.systemPackages = with pkgs; [
-      docker  
-    ];
+    virtualisation.docker = {
+      enable = true;
+      storageDriver = "overlay2";
+    };
 }

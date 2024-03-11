@@ -6,7 +6,6 @@
     imports = [
         inputs.home-manager.nixosModules.home-manager
         ./auto-upgrade.nix
-        ./grub.nix
         ./nix.nix
     ];
 
@@ -23,13 +22,6 @@
     networking.domain = "cimbulka.net";
     
     time.timeZone = "Europe/Prague";
-    fonts = {
-        fontconfig.enable = true;
-
-        packages = with pkgs; [
-            nerdfonts
-        ];
-    };
 
     environment = {
         enableAllTerminfo = true;
