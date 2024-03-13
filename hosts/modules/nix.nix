@@ -25,7 +25,7 @@ in {
   config = mkIf cfg.enable {
     nix = {
       settings = {
-        trusted-user = [ "root" "@wheel" ];
+        trusted-users = [ "root" "@wheel" ];
         auto-optimise-store = cfg.autoOptimise;
         experimental-features = [ "nix-command" "flakes" "repl-flake" ];
       };
