@@ -16,7 +16,7 @@
         enableZshIntegration = true;
         enableScDaemon = true;
 
-        pinentryFlavor = "gnome3";
+        # pinentryFlavor = "gnome3";
 
         sshKeys = [
             "10DF1D66D37019480F1474ABF73E80E3703B113E"
