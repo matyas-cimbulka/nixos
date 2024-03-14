@@ -48,7 +48,7 @@ in {
 
                 bind_addr = "0.0.0.0";
 
-                address = {
+                addresses = {
                     http = "0.0.0.0";
                 };
 

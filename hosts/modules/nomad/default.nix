@@ -37,6 +37,7 @@ in {
             dropPrivileges = false;
             
             extraPackages = with pkgs; [ consul ];
+            extraSettingsPaths = [ "/etc/nomad" ];
 
             settings = {
                 datacenter = "homelab";
