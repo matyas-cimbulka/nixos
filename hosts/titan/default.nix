@@ -50,10 +50,10 @@
             enable = true;
             
             exports = ''
-                /export 192.168.50.6(rw,fsid=0,no_subtree_check)
-                /export/hdd/volumes 192.168.50.6(rw,sync,no_subtree_check,nohide,insecure)
-                /export/ssd/volumes 192.168.50.6(rw,sync,no_subtree_check,nohide,insecure)
-                /export/ssd/config 192.168.50.6(rw,sync,no_subtree_check,nohide,insecure)
+                /export 192.168.50.5(rw,fsid=0,no_subtree_check) 192.168.50.6(rw,fsid=0,no_subtree_check)
+                /export/hdd/volumes 192.168.50.5(rw,sync,no_subtree_check,nohide,insecure) 192.168.50.6(rw,sync,no_subtree_check,nohide,insecure)
+                /export/ssd/volumes 192.168.50.5(rw,sync,no_subtree_check,nohide,insecure) 192.168.50.6(rw,sync,no_subtree_check,nohide,insecure)
+                /export/ssd/config 192.168.50.5(rw,sync,no_subtree_check,nohide,insecure) 192.168.50.6(rw,sync,no_subtree_check,nohide,insecure)
             '';
         };
 
