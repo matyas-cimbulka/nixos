@@ -56,6 +56,14 @@
                 /export/ssd/config 192.168.50.6(rw,sync,no_subtree_check,nohide,insecure)
             '';
         };
+
+        openssh = {
+            enable = true;
+
+            settings = {
+                PermitRootLogin = "yes";
+            };
+        };
     };
     
     environment.systemPackages = with pkgs; [ nfs-utils ];

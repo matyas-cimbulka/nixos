@@ -49,6 +49,14 @@
         }];
     };
 
+    services.openssh = {
+        enable = true;
+
+        settings = {
+            PermitRootLogin = "yes";
+        };
+    };
+
     environment.systemPackages = with pkgs; [ nfs-utils ];
 
     home-manager.extraSpecialArgs = { inherit inputs; };
