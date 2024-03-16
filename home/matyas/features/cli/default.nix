@@ -22,6 +22,8 @@
         jq
 
         openssh
+
+        _1password
     ];
 
     programs = {
