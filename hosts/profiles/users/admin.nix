@@ -29,6 +29,4 @@ in
 
     programs.zsh.enable = true;
     environment.pathsToLink = [ "/share/zsh" ];
-
-    home-manager.users.admin = import ../../../../home/admin/${config.networking.hostName}.nix;
 }

@@ -1,22 +1,31 @@
+{ pkgs, inputs, ... }:
+
 {
     imports = [
+        inputs.home-manager.nixosModules.home-manager
         ./hardware-configuration.nix
         ./boot.nix
-        ./nomad.nix
-        ./consul.nix
+        ./profiles
 
-        ../common/global
-        ../common/users/admin
-        
-        ../common/optional/acme.nix
-        ../common/optional/docker.nix
-        ../common/optional/sshd.nix
+        ../modules
+        ../profiles/users/admin.nix
+        ../profiles/certs/cimbulka-net.nix
     ];
 
-    networking = {
-        hostName = "titan";
-        networkmanager.enable = true;
+    modules = {
+        acme.enable = true;
+        autoUpgrade.enable = true;
+        nix.enable = true;
 
+        networking = {
+            enable = true;
+            hostName = "titan";
+        };
+    };
+
+    time.timeZone = "Europe/Prague";
+
+    networking = {
         hosts = {
             "192.168.50.2" = [ "nas-1" ];
             "192.168.50.6" = [ "europa" ];
@@ -35,24 +44,32 @@
     };
 
     services = {
-        xserver = {
-            # enable = false;
-            xkb.layout = "us";
-        };
-
         rpcbind.enable = true;
 
         nfs.server = {
             enable = true;
             
             exports = ''
-                /export 192.168.50.6(rw,fsid=0,no_subtree_check)
-                /export/hdd/volumes 192.168.50.6(rw,sync,no_subtree_check,nohide,insecure)
-                /export/ssd/volumes 192.168.50.6(rw,sync,no_subtree_check,nohide,insecure)
-                /export/ssd/config 192.168.50.6(rw,sync,no_subtree_check,nohide,insecure)
+                /export *(rw,fsid=0,no_subtree_check)
+                /export/hdd/volumes *(rw,sync,no_subtree_check,nohide,insecure)
+                /export/ssd/volumes *(rw,sync,no_subtree_check,nohide,insecure)
+                /export/ssd/config *(rw,sync,no_subtree_check,nohide,insecure)
             '';
         };
+
+        openssh = {
+            enable = true;
+
+            settings = {
+                PermitRootLogin = "yes";
+            };
+        };
     };
+    
+    environment.systemPackages = with pkgs; [ nfs-utils ];
+
+    home-manager.extraSpecialArgs = { inherit inputs; };
+    home-manager.users.admin = import ../../home/admin/titan.nix;
 
     system.stateVersion = "24.05";
 }

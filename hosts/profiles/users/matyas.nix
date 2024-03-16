@@ -26,6 +26,4 @@ in
 
     programs.zsh.enable = true;
     environment.pathsToLink = [ "/share/zsh" ];
-
-    home-manager.users.matyas = import ../../../../home/matyas/${config.networking.hostName}.nix;
 }
