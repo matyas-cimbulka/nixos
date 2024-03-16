@@ -31,6 +31,7 @@
             "[terraform]" = {
                 "editor.tabSize" = 2;
             };
+            "terminal.external.linuxExec" = "warp-terminal";
             "workbench.iconTheme" = "material-icon-theme";
         };
     };

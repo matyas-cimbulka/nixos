@@ -4,7 +4,7 @@
   home = {
     file.p10k-config = {
       enable = true;
-      source = ./single-line-p10k.zsh;
+      source = ./multi-line-p10k.zsh;
       target = "${config.home.homeDirectory}/.p10k.zsh";
     };
   };
@@ -12,7 +12,7 @@
   programs.zsh = {
     enable = true;
     autocd = true;
-    enableAutosuggestions = true;
+    autosuggestion.enable = true;
     enableCompletion = true;
     initExtraFirst = "source ~/.p10k.zsh";
     initExtra = ''printf '\eP$f{"hook": "SourcedRcFileForWarp", "value": { "shell": "zsh"}}\x9c' '';

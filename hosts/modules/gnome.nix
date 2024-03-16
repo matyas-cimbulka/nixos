@@ -20,6 +20,7 @@ in {
         };
       };
 
+      dbus.packages = with pkgs; [ gcr ];
       udev.packages = [ pkgs.gnome.gnome-settings-daemon ];
     };
   };
