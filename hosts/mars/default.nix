@@ -2,24 +2,10 @@
     imports = [
         ./hardware-configuration.nix
         
-        ../common/global
-        ../common/users/matyas
-
-        ../common/optional/grub.nix
-        ../common/optional/gnome.nix
-        ../common/optional/smartcards.nix
-        ../common/optional/steam.nix
-        ../common/optional/nvidia.nix
-        ../common/optional/fonts.nix
-        ../common/optional/pipewire.nix
-        ../common/optional/docker.nix
-        ../common/optional/tailscale.nix
+        ../modules
+        ../profiles/users/matyas.nix
+        ../profiles/desktop
     ];
-
-    boot.loader.grub = {
-        useOSProber = true;
-        default = "saved";
-    };
 
     fileSystems = {
         "/".options = [ "compress=zstd:3" ];
@@ -27,17 +13,30 @@
         "/nix".options = [ "compress=zstd:6 noatime" ];
     };
 
-    networking = {
-        hostName = "mars";
-        networkmanager.enable = true;
+    modules = {
+        autoUpgrade.enable = true;
+        nix.enable = true;
+        nvidia.enable = true;
+        sound.enable = true;
+        smartcards.enable = true;
+        gnome.enable = true;
 
-        hosts = {
-            "192.168.50.2" = [ "nas-1" ];
-            "192.168.50.5" = [ "titan" ];
-            "192.168.50.6" = [ "europa" ];
-            "100.75.74.38" = [ "titan.tailnet" ];
-            "100.106.236.108" = [ "europa.tailnet" ];
+        grub = {
+            enable = true;
+            dualBoot = true;
         };
+
+        networking = {
+          enable = true;
+          hostName = "mars";
+          domain = "cimbulka.net";
+        };
+    };
+
+    networking.hosts = {
+        "192.168.50.2" = [ "nas-1" ];
+        "192.168.50.5" = [ "titan" ];
+        "192.168.50.6" = [ "europa" ];
     };
 
     services = {
@@ -50,7 +49,9 @@
         flatpak.enable = true;
     };
 
-    # Windows clock
+    home-manager.users.matyas = import ../../home/matyas/mars.nix;
+
+    # Windows clock compatibility
     # time.hardwareClockInLocalTime = true;
 
     system.stateVersion = "23.05";

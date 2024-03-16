@@ -1,17 +1,24 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 
 {
     imports = [
+        inputs.home-manager.nixosModules.home-manager
         ./hardware-configuration.nix
-        ./nomad.nix
-        ./consul.nix
+        ./profiles
 
-        ../common/global
-        ../common/users/admin
-        
-        ../common/optional/docker.nix
-        ../common/optional/sshd.nix
+        ../modules
+        ../profiles/users/admin.nix
     ];
+
+    modules = {
+        autoUpgrade.enable = true;
+        nix.enable = true;
+        
+        networking = {
+            enable = true;
+            hostName = "europa";
+        };
+    };
 
     boot = {
         kernelPackages = pkgs.linuxPackages_latest;
@@ -24,17 +31,13 @@
     };
 
     hardware.deviceTree.name = "rockchip/rk3568-odroid-m1.dtb";
+    time.timeZone = "Europe/Prague";
 
     networking = {
-        hostName = "europa";
-        networkmanager.enable = true;
-
         hosts = {
             "192.168.50.2" = [ "nas-1" ];
             "192.168.50.5" = [ "titan" ];
         };
-
-        firewall.allowedTCPPorts = [ 8301 8302 8500 8501 8502 8503 8600 ];
 
         vlans = {
             vlan10 = { id = 10; interface = "end0"; };
@@ -46,12 +49,18 @@
         }];
     };
 
+    services.openssh = {
+        enable = true;
+
+        settings = {
+            PermitRootLogin = "yes";
+        };
+    };
+
     environment.systemPackages = with pkgs; [ nfs-utils ];
 
-    services.xserver = {
-        enable = true;
-        xkb.layout = "us";
-    };
+    home-manager.extraSpecialArgs = { inherit inputs; };
+    home-manager.users.admin = import ../../home/admin/europa.nix;
 
     system.stateVersion = "24.05";
 }
