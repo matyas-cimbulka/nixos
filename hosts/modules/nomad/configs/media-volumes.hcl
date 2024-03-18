@@ -8,7 +8,7 @@ client {
     }
 
     host_volume "downloads" {
-        path = "/mnt/hdd/sabnzbd"
+        path = "/mnt/hdd/volumes/sabnzbd"
     }
 
     host_volume "overseerr" {
