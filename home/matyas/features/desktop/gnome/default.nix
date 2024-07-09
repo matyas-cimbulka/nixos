@@ -9,7 +9,7 @@
         blackbox-terminal
 
         gedit
-        gnome.gnome-tweaks
+        gnome-tweaks
         
         gnomeExtensions.appindicator
         gnomeExtensions.search-light
