@@ -28,12 +28,28 @@
             "terminal.integrated.fontFamily" = "FiraMono Nerd Font";
             "explorer.confirmDelete" = false;
             "svelte.enable-ts-plugin" = true;
-            "[terraform]" = {
-                "editor.tabSize" = 2;
-            };
             "terminal.external.linuxExec" = "warp-terminal";
             "workbench.iconTheme" = "material-icon-theme";
             "editor.formatOnSave" = true;
+#            "editor.defaultFormatter" = "esbenp.prettier-vscode";
+            "[javascript]" = {
+                "editort.defaultFormatter" = "esbenp.prettier-vscode";
+            };
+            "[svelte]" = {
+                "editort.defaultFormatter" = "esbenp.prettier-vscode";
+            };
+            "[terraform]" = {
+                "editor.tabSize" = 2;
+            };
+            "[typescript]" = {
+                "editort.defaultFormatter" = "esbenp.prettier-vscode";
+            };
+            "[postcss]" = {
+                "editort.defaultFormatter" = "esbenp.prettier-vscode";
+            };
+            "[html]" = {
+                "editort.defaultFormatter" = "esbenp.prettier-vscode";
+            };
         };
     };
 }
