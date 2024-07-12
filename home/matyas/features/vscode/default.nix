@@ -33,22 +33,22 @@
             "editor.formatOnSave" = true;
 #            "editor.defaultFormatter" = "esbenp.prettier-vscode";
             "[javascript]" = {
-                "editort.defaultFormatter" = "esbenp.prettier-vscode";
+                "editor.defaultFormatter" = "esbenp.prettier-vscode";
             };
             "[svelte]" = {
-                "editort.defaultFormatter" = "esbenp.prettier-vscode";
+                "editor.defaultFormatter" = "esbenp.prettier-vscode";
             };
             "[terraform]" = {
                 "editor.tabSize" = 2;
             };
             "[typescript]" = {
-                "editort.defaultFormatter" = "esbenp.prettier-vscode";
+                "editor.defaultFormatter" = "esbenp.prettier-vscode";
             };
             "[postcss]" = {
-                "editort.defaultFormatter" = "esbenp.prettier-vscode";
+                "editor.defaultFormatter" = "esbenp.prettier-vscode";
             };
             "[html]" = {
-                "editort.defaultFormatter" = "esbenp.prettier-vscode";
+                "editor.defaultFormatter" = "esbenp.prettier-vscode";
             };
         };
     };
