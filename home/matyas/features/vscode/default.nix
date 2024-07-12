@@ -33,6 +33,7 @@
             };
             "terminal.external.linuxExec" = "warp-terminal";
             "workbench.iconTheme" = "material-icon-theme";
+            "editor.formatOnSave" = true;
         };
     };
 }

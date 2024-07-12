@@ -7,5 +7,6 @@
         ./features/desktop/gnome
         ./features/office
         ./features/vscode
+        ./features/webdev
     ];
 }
