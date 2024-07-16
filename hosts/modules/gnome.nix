@@ -11,6 +11,8 @@ in {
     programs.xwayland.enable = true;
     environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
+    i18n.supportedLocales = [ "all" ];
+
     services = {
       xserver = {
         desktopManager.gnome.enable = true;
