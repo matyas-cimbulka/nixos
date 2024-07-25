@@ -32,6 +32,7 @@
 
             init.defaultBranch = "main";
             core.editor = "code --wait";
+            gitbutler.signCommits = true;
         };
     };
 }

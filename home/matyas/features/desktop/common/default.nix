@@ -5,7 +5,7 @@
         anytype
         _1password-gui-beta
 
-        gitbutler
+    #    gitbutler
         google-chrome
         yubioath-flutter
         warp-terminal
