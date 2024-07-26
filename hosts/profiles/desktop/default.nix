@@ -22,7 +22,14 @@
     systemPackages = with pkgs; [
       git
       psmisc
+      openssl
+
+    #  gitbutler
     ];
+
+    variables = {
+      PKG_CONFIG_PATH="${pkgs.openssl.dev}/lib/pkgconfig";
+    };
   };
 
   services = {
