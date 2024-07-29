@@ -41,4 +41,8 @@
     printing.enable = true;
     flatpak.enable = true;
   };
+
+  programs.steam = {
+    enable = true;
+  };
 }
