@@ -31,20 +31,24 @@
             "terminal.external.linuxExec" = "warp-terminal";
             "workbench.iconTheme" = "material-icon-theme";
             "editor.formatOnSave" = true;
+            "rust-analyzer.check.command" = "clippy";
 #            "editor.defaultFormatter" = "esbenp.prettier-vscode";
-            "[javascript]" = {
-                "editor.defaultFormatter" = "esbenp.prettier-vscode";
-            };
             "[svelte]" = {
                 "editor.defaultFormatter" = "esbenp.prettier-vscode";
             };
             "[terraform]" = {
                 "editor.tabSize" = 2;
             };
+            "[javascript]" = {
+                "editor.defaultFormatter" = "esbenp.prettier-vscode";
+            };
             "[typescript]" = {
                 "editor.defaultFormatter" = "esbenp.prettier-vscode";
             };
             "[postcss]" = {
+                "editor.defaultFormatter" = "esbenp.prettier-vscode";
+            };
+            "[css]" = {
                 "editor.defaultFormatter" = "esbenp.prettier-vscode";
             };
             "[html]" = {
