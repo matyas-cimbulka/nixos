@@ -33,9 +33,6 @@
             "editor.formatOnSave" = true;
             "rust-analyzer.check.command" = "clippy";
 #            "editor.defaultFormatter" = "esbenp.prettier-vscode";
-            "[javascript]" = {
-                "editor.defaultFormatter" = "esbenp.prettier-vscode";
-            };
             "[svelte]" = {
                 "editor.defaultFormatter" = "esbenp.prettier-vscode";
             };
