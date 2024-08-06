@@ -31,6 +31,7 @@
             "terminal.external.linuxExec" = "warp-terminal";
             "workbench.iconTheme" = "material-icon-theme";
             "editor.formatOnSave" = true;
+            "window.titleBarStyle" = "custom";
             "rust-analyzer.check.command" = "clippy";
 #            "editor.defaultFormatter" = "esbenp.prettier-vscode";
             "[svelte]" = {
