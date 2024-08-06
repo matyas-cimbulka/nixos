@@ -18,7 +18,7 @@
         enableZshIntegration = true;
         enableScDaemon = true;
 
-        pinentryPackage = pkgs.pinentry-gnome3;
+        pinentryPackage = pkgs.pinentry-curses;
 
         sshKeys = [
             "10DF1D66D37019480F1474ABF73E80E3703B113E"
