@@ -19,7 +19,7 @@
         nvidia.enable = true;
         sound.enable = true;
         smartcards.enable = true;
-        gnome.enable = true;
+        kde.enable = true;
 
         grub = {
             enable = true;
