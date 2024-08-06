@@ -7,6 +7,7 @@
         ./consul.nix
         ./gnome.nix
         ./grub.nix
+        ./kde.nix
         ./networking.nix
         ./nix.nix
         ./nvidia.nix

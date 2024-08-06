@@ -6,8 +6,6 @@
     ];
 
     home.packages = with pkgs; [
-        blackbox-terminal
-
         gedit
         gnome-tweaks
         

@@ -4,7 +4,7 @@
     imports = [
         ./global
 
-        ./features/desktop/gnome
+        ./features/desktop/common
         ./features/office
         ./features/proton
         ./features/vscode
