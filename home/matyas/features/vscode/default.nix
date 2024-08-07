@@ -32,6 +32,7 @@
             "workbench.iconTheme" = "material-icon-theme";
             "editor.formatOnSave" = true;
             "window.titleBarStyle" = "custom";
+            "window.customTitleBarVisibility" = "windowed";
             "rust-analyzer.check.command" = "clippy";
 #            "editor.defaultFormatter" = "esbenp.prettier-vscode";
             "[svelte]" = {
