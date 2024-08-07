@@ -5,6 +5,7 @@
         ./global
 
         ./features/desktop/common
+        ./features/gitkraken
         ./features/office
         ./features/proton
         ./features/vscode
