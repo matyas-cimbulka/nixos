@@ -1,11 +1,10 @@
 { pkgs, ... }:
-
 {
     home.packages = with pkgs; [
         # anytype
         # _1password-gui-beta
         blackbox-terminal
-    #    gitbutler
+        gitbutler
         google-chrome
         yubioath-flutter
         warp-terminal
