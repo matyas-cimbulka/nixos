@@ -27,7 +27,7 @@ in {
       settings = {
         trusted-users = [ "root" "@wheel" ];
         auto-optimise-store = cfg.autoOptimise;
-        experimental-features = [ "nix-command" "flakes" "repl-flake" ];
+        experimental-features = [ "nix-command" "flakes" ];
       };
 
       gc = mkIf cfg.garbageCollection {

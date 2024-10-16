@@ -15,11 +15,17 @@
 
     modules = {
         autoUpgrade.enable = true;
-        nix.enable = true;
         nvidia.enable = true;
         sound.enable = true;
         smartcards.enable = true;
         kde.enable = true;
+        docker.enable = true;
+
+        nix = {
+            enable = true;
+            autoOptimise = true;
+            garbageCollection = true;
+        };
 
         grub = {
             enable = true;
