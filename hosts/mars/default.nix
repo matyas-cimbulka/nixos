@@ -1,3 +1,5 @@
+{ pkgs, ... }:
+
 {
     imports = [
         ./hardware-configuration.nix
@@ -52,6 +54,21 @@
 
         printing.enable = true;
         flatpak.enable = true;
+
+        ollama = {
+            enable = true;
+            package = pkgs.ollama-cuda;
+            acceleration = "cuda";
+
+            loadModels = [
+                "llama3.2"
+                "codegemma"
+            ];
+        };
+
+        open-webui = {
+            enable = true;
+        };
     };
 
     home-manager.users.matyas = import ../../home/matyas/mars.nix;
