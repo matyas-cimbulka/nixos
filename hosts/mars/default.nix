@@ -1,3 +1,5 @@
+{ pkgs, ... }:
+
 {
     imports = [
         ./hardware-configuration.nix
@@ -19,6 +21,7 @@
         sound.enable = true;
         smartcards.enable = true;
         kde.enable = true;
+        docker.enable = true;
 
         nix = {
             enable = true;
@@ -52,6 +55,17 @@
 
         printing.enable = true;
         flatpak.enable = true;
+
+        ollama = {
+            enable = true;
+            package = pkgs.ollama-cuda;
+            acceleration = "cuda";
+
+            loadModels = [
+                "llama3.2"
+                "codestral"
+            ];
+        };
     };
 
     home-manager.users.matyas = import ../../home/matyas/mars.nix;
