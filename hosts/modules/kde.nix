@@ -20,7 +20,7 @@ in {
         wayland.enable = false;
       };
 
-      # dbus.packages = with pkgs; [ gcr ];
+      dbus.packages = with pkgs; [ gcr ];
     };
   };
 }
