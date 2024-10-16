@@ -21,6 +21,7 @@
         sound.enable = true;
         smartcards.enable = true;
         kde.enable = true;
+        docker.enable = true;
 
         nix = {
             enable = true;
@@ -64,10 +65,6 @@
                 "llama3.2"
                 "codegemma"
             ];
-        };
-
-        open-webui = {
-            enable = true;
         };
     };
 
