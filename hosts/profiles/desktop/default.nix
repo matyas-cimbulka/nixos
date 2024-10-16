@@ -30,6 +30,11 @@
     variables = {
       PKG_CONFIG_PATH="${pkgs.openssl.dev}/lib/pkgconfig";
     };
+
+    sessionVariables = {
+      NIXOS_OZONE_WL = "1";
+      WEBKIT_DISABLE_DMABUF_RENDERER = "1";
+    };
   };
 
   services = {

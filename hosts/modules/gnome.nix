@@ -9,7 +9,6 @@ in {
 
   config = mkIf cfg.enable {
     programs.xwayland.enable = true;
-    environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
     i18n.supportedLocales = [ "all" ];
 
