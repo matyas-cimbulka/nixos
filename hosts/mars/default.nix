@@ -63,7 +63,7 @@
 
             loadModels = [
                 "llama3.2"
-                "codegemma"
+                "codestral"
             ];
         };
     };
