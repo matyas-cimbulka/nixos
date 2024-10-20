@@ -14,5 +14,6 @@
         ./nvidia.nix
         ./smartcards.nix
         ./sound.nix
+        ./steam.nix
     ];
 }
