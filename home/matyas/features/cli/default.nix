@@ -2,6 +2,7 @@
 
 {
     imports = [
+        ./fish
         ./gpg
         ./zsh
         
@@ -12,6 +13,7 @@
         ./exa.nix
         ./git.nix
         ./nomad.nix
+        ./starship.nix
         ./zellij.nix
         ./zoxide.nix
     ];
