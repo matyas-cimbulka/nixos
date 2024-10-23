@@ -31,6 +31,7 @@
             "terminal.external.linuxExec" = "warp-terminal";
             "workbench.iconTheme" = "material-icon-theme";
             "editor.formatOnSave" = true;
+            "editor.fontFamily" = "'FiraCode Nerd Font', 'Droid Sans Mono', 'monospace', monospace";
             "window.titleBarStyle" = "custom";
             "window.customTitleBarVisibility" = "windowed";
             "rust-analyzer.check.command" = "clippy";
