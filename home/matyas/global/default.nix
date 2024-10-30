@@ -4,6 +4,8 @@
     imports = [
         ../features/cli
         ../features/helix
+
+        ../features/notes
     ];
 
     nixpkgs = {
