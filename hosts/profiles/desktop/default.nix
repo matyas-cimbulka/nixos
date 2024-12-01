@@ -11,8 +11,10 @@
   fonts = {
     fontconfig.enable = true;
 
-    packages = with pkgs; [
-      nerdfonts
+    packages = with pkgs.nerd-fonts; [
+      fira-mono
+      fira-code
+      jetbrains-mono
     ];
   };
 
@@ -23,8 +25,6 @@
       git
       psmisc
       openssl
-
-    #  gitbutler
     ];
 
     variables = {
