@@ -8,6 +8,7 @@
         ./docker.nix
         ./gnome.nix
         ./grub.nix
+        ./hyprland.nix
         ./kde.nix
         ./networking.nix
         ./nix.nix

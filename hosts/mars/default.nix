@@ -39,6 +39,7 @@
           enable = true;
           hostName = "mars";
           domain = "cimbulka.net";
+          nm-applet = true;
         };
     };
 

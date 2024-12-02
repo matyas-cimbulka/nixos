@@ -12,9 +12,15 @@ in {
       type = types.str;
       default = "cimbulka.net";
     };
+    nm-applet = mkOption {
+      type = types.bool;
+      default = false;
+    };
   };
 
   config = mkIf cfg.enable {
+    programs.nm-applet.enable = cfg.nm-applet;
+    
     networking = {
       hostName = cfg.hostName;
       domain = cfg.domain;
