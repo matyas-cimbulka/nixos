@@ -6,7 +6,7 @@
 
         publicKeys = [
             {
-                source = ./pub-key.asc;
+                source = ./public-key.asc;
                 trust = "ultimate";
             }
         ];
@@ -21,8 +21,8 @@
         pinentryPackage = pkgs.pinentry-qt;
 
         sshKeys = [
-            "10DF1D66D37019480F1474ABF73E80E3703B113E"
-            "93EF47B4B4A54FE9EB3758EA32DB47EC3CBEBE18"
+            "88B23F522363F9A60380D4D9378E07A865B174ED"
+            "BD4058794602759DB44A3EF22BEBF52C0C8B2AE3"
         ];
     };
 }

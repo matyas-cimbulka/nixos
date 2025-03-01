@@ -5,8 +5,8 @@
         userEmail = "matyas.cimbulka@gmail.com";
 
         signing = {
-            key = "CC4BE8447014DA973AC7E95A770312BA4911CD17";
             signByDefault = true;
+            key = null;
         };
 
         extraConfig = {
