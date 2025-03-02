@@ -21,8 +21,16 @@ in {
         };
       };
 
+      gnome.gnome-keyring.enable = true;
+
       dbus.packages = with pkgs; [ gcr ];
       udev.packages = with pkgs; [ gnome-settings-daemon ];
     };
+
+    environment.systemPackages = with pkgs; [
+      adwaita-icon-theme
+      vimix-cursor-theme
+      vimix-icon-theme
+    ];
   };
 }
