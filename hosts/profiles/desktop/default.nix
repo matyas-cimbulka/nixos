@@ -40,10 +40,10 @@
   services = {
     dbus.enable = true;
 
-    tailscale = {
-      enable = true;
-      useRoutingFeatures = "client";
-    };
+    # tailscale = {
+    #   enable = true;
+    #   useRoutingFeatures = "client";
+    # };
 
     xserver = {
       enable = true;

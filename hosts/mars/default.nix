@@ -18,10 +18,10 @@
     modules = {
         autoUpgrade.enable = true;
         nvidia.enable = true;
+        gnome.enable = true;
         sound.enable = true;
         smartcards.enable = true;
         steam.enable = true;
-        kde.enable = true;
         docker.enable = true;
 
         nix = {
