@@ -25,7 +25,7 @@
 
         openssh
 
-        # _1password
+        _1password-cli
     ];
 
     programs = {
