@@ -5,7 +5,9 @@
         ./global
 
         ./features/desktop/gnome
-        ./features/kitty
+
+        ./features/terminals/kitty.nix
+        ./features/terminals/ghostty.nix
 
         ./features/office
         # ./features/proton
