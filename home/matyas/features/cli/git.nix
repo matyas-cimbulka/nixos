@@ -1,4 +1,8 @@
+{ pkgs, ... }:
+
 {
+    home.packages = with pkgs; [ jujutsu ];
+
     programs.git = {
         enable = true;
         userName = "Matyas Cimbulka";
