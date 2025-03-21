@@ -29,7 +29,7 @@ in {
 
     environment.systemPackages = with pkgs; [
       adwaita-icon-theme
-      vimix-cursor-theme
+      vimix-cursors
       vimix-icon-theme
     ];
   };
