@@ -18,6 +18,9 @@
         enableZshIntegration = true;
         enableScDaemon = true;
 
+        defaultCacheTtl = 1800; # Cache for 30 minutes
+        maxCacheTtl = 7200;     # Maximum cache for 2 hours
+
         pinentryPackage = pkgs.pinentry-gnome3;
 
         sshKeys = [

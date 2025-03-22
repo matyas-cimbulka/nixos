@@ -3,6 +3,23 @@
 {
     home.packages = with pkgs; [ jujutsu ];
 
+    home.file."config.toml" = {
+        target = ".config/jj/config.toml";
+        text = ''
+        [user]
+        name = "Matyas Cimbulka"
+        email = "matyas.cimbulka@gmail.com"
+
+        [signing]
+        behavior = "own"
+        backend = "gpg"
+        key = "matyas.cimbulka@gmail.com"
+
+        [git]
+        sign-on-push = true
+        '';
+    };
+
     programs.git = {
         enable = true;
         userName = "Matyas Cimbulka";
