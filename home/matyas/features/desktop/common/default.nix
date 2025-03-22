@@ -4,6 +4,6 @@
         _1password-gui
         google-chrome
         yubioath-flutter
-        gitbutler
+        # gitbutler
     ];
 }
