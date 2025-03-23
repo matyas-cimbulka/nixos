@@ -13,5 +13,6 @@
         # ./features/proton
         ./features/vscode
         ./features/webdev
+        ./features/development
     ];
 }
