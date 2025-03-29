@@ -15,24 +15,28 @@
     # Command: nixos-rebuild --flake .#hostname
     nixosConfigurations = {
       deimos = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
         specialArgs = { inherit inputs; };
         modules = [
           ./hosts/deimos
         ];
       };
       mars = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
         specialArgs = { inherit inputs; };
         modules = [
           ./hosts/mars
         ];
       };
       titan = nixpkgs.lib.nixosSystem {
+        system = "aarch64-linux";
         specialArgs = { inherit inputs; };
         modules = [
           ./hosts/titan
         ];
       };
       europa = nixpkgs.lib.nixosSystem {
+        system = "aarch64-linux";
         specialArgs = { inherit inputs; };
         modules = [
           ./hosts/europa
