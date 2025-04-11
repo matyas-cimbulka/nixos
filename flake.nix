@@ -28,6 +28,25 @@
           ./hosts/mars
         ];
       };
+
+      # Servers
+      # OCI
+      eros = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        specialArgs = { inherit inputs; };
+        modules = [
+          ./hosts/eros
+        ];
+      };
+      pallas = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        specialArgs = { inherit inputs; };
+        modules = [
+          ./hosts/pallas
+        ];
+      };
+
+      #Homelab
       titan = nixpkgs.lib.nixosSystem {
         system = "aarch64-linux";
         specialArgs = { inherit inputs; };
@@ -57,6 +76,21 @@
         extraSpecialArgs = { inherit inputs; };
         modules = [ ./home/matyas/mars.nix ];
       };
+
+      # Servers
+      # OCI
+      "admin@eros" = home-manager.lib.homeManagerConfiguration {
+        pkgs = nixpkgs.legacyPackages.x86_64-linux;
+        extraSpecialArgs = { inherit inputs; };
+        modules = [ ./home/admin/eros.nix ];
+      };
+      "admin@pallas" = home-manager.lib.homeManagerConfiguration {
+        pkgs = nixpkgs.legacyPackages.x86_64-linux;
+        extraSpecialArgs = { inherit inputs; };
+        modules = [ ./home/admin/pallas.nix ];
+      };
+
+      # Homelab
       "admin@titan" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.aarch64-linux;
         extraSpecialArgs = { inherit inputs; };
