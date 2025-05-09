@@ -1,5 +1,6 @@
 {
     imports = [
+        ./graphics
         ./nomad
 
         ./acme.nix
@@ -11,7 +12,6 @@
         ./kde.nix
         ./networking.nix
         ./nix.nix
-        ./nvidia.nix
         ./smartcards.nix
         ./sound.nix
         ./steam.nix
