@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
 {
   home = {
@@ -14,8 +14,10 @@
     autocd = true;
     autosuggestion.enable = true;
     enableCompletion = true;
-    initExtraFirst = "source ~/.p10k.zsh";
+    # initExtraFirst = "source ~/.p10k.zsh";
     # initExtra = ''printf '\eP$f{"hook": "SourcedRcFileForWarp", "value": { "shell": "zsh"}}\x9c' '';
+
+    initContent = lib.mkBefore "source ~/.p10k.zsh";
 
     syntaxHighlighting.enable = true;
 

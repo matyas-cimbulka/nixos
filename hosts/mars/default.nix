@@ -17,7 +17,7 @@
 
     modules = {
         autoUpgrade.enable = true;
-        nvidia.enable = true;
+        amd-gpu.enable = true;
         gnome.enable = true;
         sound.enable = true;
         smartcards.enable = true;
