@@ -11,11 +11,6 @@ in {
       default = true;
     };
 
-    autoOptimise = mkOption {
-      type = types.bool;
-      default = true;
-    };
-
     garbageCollection = mkOption {
       type = types.bool;
       default = true;
@@ -26,14 +21,14 @@ in {
     nix = {
       settings = {
         trusted-users = [ "root" "@wheel" ];
-        auto-optimise-store = cfg.autoOptimise;
+        auto-optimise-store = true;
         experimental-features = [ "nix-command" "flakes" ];
       };
 
       gc = mkIf cfg.garbageCollection {
           automatic = true;
-          dates = "weekly";
-          options = "--delete-older-then 14d";
+          dates = "daily";
+          options = "--delete-older-then 7d";
       };
 
       registry = mapAttrs (_: value: { flake = value; }) inputs;
