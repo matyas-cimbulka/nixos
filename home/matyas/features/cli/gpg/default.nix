@@ -21,7 +21,7 @@
         defaultCacheTtl = 1800; # Cache for 30 minutes
         maxCacheTtl = 7200;     # Maximum cache for 2 hours
 
-        pinentryPackage = pkgs.pinentry-gnome3;
+        pinentry.package = pkgs.pinentry-gnome3;
 
         sshKeys = [
             "88B23F522363F9A60380D4D9378E07A865B174ED"

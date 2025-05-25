@@ -26,7 +26,6 @@
 
         nix = {
             enable = true;
-            autoOptimise = true;
             garbageCollection = true;
         };
 

@@ -15,10 +15,14 @@
 
     modules = {
         autoUpgrade.enable = true;
-        nix.enable = true;
         sound.enable = true;
         smartcards.enable = true;
         kde.enable = true;
+
+        nix = {
+            enable = true;
+            garbageCollection = true;
+        };
 
         grub = {
             enable = true;
